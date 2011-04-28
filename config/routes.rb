@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.notifications '/notifications', :controller => 'home', :action => 'notifications'
   map.say_your_price '/sayprice', :controller => 'home', :action => 'say_your_price'
   map.winners '/winners', :controller => 'home', :action => 'winners'
+  map.search '/search', :controller => 'home', :action => 'search'
 
   map.faqs '/faqs', :controller => 'home', :action => 'faqs'
 

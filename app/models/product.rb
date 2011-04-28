@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  acts_as_suggest
+  
   belongs_to :user
   has_many :offers
 

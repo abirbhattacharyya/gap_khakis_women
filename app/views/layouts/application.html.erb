@@ -43,6 +43,12 @@
                     <%= content_tag(:li, link_to("Winners", winners_path), :class => ([winners_path].include? request.path) ? "current" : nil) %>
                 <% end %>
             </ul>
+            <% form_tag search_path do %>
+                <% content_tag :div, :class => "search" do %>
+                    <%= text_field_tag :keyword %>
+                    <%= submit_tag "Search" %>
+                <% end %>
+            <% end %>
         </div><!-- #header -->
 
         <% content_tag :div, :id => "content" do %>

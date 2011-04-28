@@ -156,6 +156,43 @@ UL.list {
             #header UL LI A:hover {
                 background: #cab492;
                 }
+    #header .search {
+        overflow: hidden;
+        float: right;
+        padding: 45px 10px 0px 0px;
+        }
+
+        #header .search INPUT[type="text"] {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            vertical-align: middle;
+            border: none;
+            background: #fff;
+            padding: 7px;
+            display: block;
+            width: 165px;
+            height: 14px;
+            float: left;
+            }
+
+        #header .search INPUT[type="submit"] {
+            color: #fff;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            vertical-align: middle;
+            border: none;
+            background: #009445;
+            padding: 4px 10px 10px;
+            margin: 0 !important;
+            display: block;
+            height: 28px;
+            float: left;
+            }
+
+        #header .search INPUT[type="submit"]:hover {
+            background: #00b353;
+            }
 
 /* content */
 

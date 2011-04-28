@@ -24,6 +24,43 @@ class HomeController < ApplicationController
 #    Notification.deliver_sendcoupon("abstartup@gmail.com")
   end
 
+  def search
+    if request.post?
+      @page = (params[:page]) ? params[:page].to_i : 1
+      @keyword = params[:keyword]
+      if @keyword.blank?
+        @size = 0
+      else
+        size = Product.count(:conditions => ["style_description RLIKE ?", @keyword]).to_i
+        if size > 0
+          @size = size
+        else
+          @suggested_products = Product.suggest(:style_description, @keyword.to_s, 2)
+          #render :text => @suggested_products.inspect and return false
+          @size = Product.count(:conditions => ["style_description in (?)", @suggested_products]).to_i
+        end
+      end
+      size = (@size > 0) ? @size : 1
+      @per_page = 1
+      @post_pages = (size.to_f/@per_page).ceil;
+      @page =1 if @page.to_i<=0 or @page.to_i > @post_pages
+      if @size > 0
+        if @suggested_products
+          @products = Product.all(:conditions => ["style_description in (?)", @suggested_products], :limit => "#{@per_page*(@page - 1)}, #{@per_page}")
+        else
+          @products = Product.all(:conditions => ["style_description RLIKE ?", @keyword], :limit => "#{@per_page*(@page - 1)}, #{@per_page}")
+        end
+      else
+        flash[:error] = "Your keyword is not matching our records."
+        @products = Product.all(:order => "rand()", :limit => 1)
+      end
+
+      @page_start_num = ((@page - 4) > 0) ? (@page - 4) : 1
+      @page_end_num = ((@page_start_num + 8) > @post_pages) ? @post_pages : (@page_start_num + 8)
+      @page_start_num = ((@post_pages - @page_end_num) < 8) ? (@page_end_num - 8) : @page_start_num if @post_pages >= 8
+    end
+  end
+
   def analytics
     @today = Date.today-1.day
     if request.post?

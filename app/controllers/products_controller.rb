@@ -167,7 +167,7 @@ class ProductsController < ApplicationController
         end
         price = params[:price].to_i
         if price <= 0
-            flash[:error] = "Hi, please enter a non-zero number and we can play"
+          flash[:error] = "Hi, please enter a non-zero number and we can play"
         else
           avg_offer = @product.offers.last(:select => "AVG(price) as avg_price", :conditions => ["response = ?", 'paid'])
           if @last_offer and @last_offer.counter?
@@ -186,22 +186,6 @@ class ProductsController < ApplicationController
                         @price_codes = @price_points.delete_if {|v| (v <= @offer.price or v > @last_offer.price)}
                       end
                     end
-#                    if avg_offer.avg_price.nil?
-#                      for price_code in @product.new_price_points
-#                        @price_codes << price_code if(price_code > @offer.price and price_code <= @last_offer.price)
-#                      end
-#                    else
-#                      if price < @product.target_price
-#                        @price_points = (avg_offer.avg_price.to_f < @product.target_price) ? @product.new_price_points : @product.min_price_points
-#                        for price_code in @price_points
-#                          @price_codes << price_code if(price_code > @offer.price and price_code < @last_offer.price)
-#                        end
-#                      else
-#                        for price_code in @product.new_price_points
-#                          @price_codes << price_code if(price_code > @offer.price and price_code < @last_offer.price)
-#                        end
-#                      end
-#                    end
                     @offer.update_attributes(:price => price, :counter => (@offer.counter + 1))
                     if @price_codes.size > 0
                       @new_offer = @price_codes[rand(999)%@price_codes.size]
