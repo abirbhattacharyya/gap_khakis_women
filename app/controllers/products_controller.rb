@@ -151,6 +151,7 @@ class ProductsController < ApplicationController
         if params[:submit_button]
           submit = params[:submit_button].strip.downcase
           if ["yes", "no"].include? submit
+            return if @last_offer.nil?
             if submit == "no"
               @last_offer.update_attribute(:response, "rejected")
               flash[:error] = "Sorry we can't make a deal right now. Try again later?"
@@ -205,7 +206,7 @@ class ProductsController < ApplicationController
                     if @price_codes.size > 0
                       @new_offer = @price_codes[rand(999)%@price_codes.size]
                       if @new_offer == @last_offer.price or @new_offer <= price
-                        @last_offer.update_attributes(:price => @new_offer, :response => "accepted")
+                        @last_offer.update_attributes(:price => @new_offer, :response => "last")
                       else
                         @last_offer.update_attributes(:price => @new_offer, :counter => (@last_offer.counter + 1))
                         @last_offer.update_attributes(:response => "last") if((rand(999)%2) == 1)
@@ -265,7 +266,12 @@ class ProductsController < ApplicationController
                       @price_codes = @product.min_price_points.delete_if {|v| v <= price}
                     end
                   end
-                  @new_offer = @price_codes[rand(999)%@price_codes.size]
+                  if @price_codes.size > 0
+                    @new_offer = @price_codes[rand(999)%@price_codes.size]
+                  else
+                    @new_offer = @product.min_price_points.first
+                  end
+                  @new_offer = @product.target_price if @new_offer.nil?
                 end
                 if @new_offer == @product.target_price
                   Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)

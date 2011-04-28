@@ -7,10 +7,10 @@
               <div class="divider"></div>
               <p>
                   Your Price: <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %>
-                  <span class="expires">Expires : <%= @payment.expiry.strftime("%m/%d/%y")[1..-1] %></span>
+                  <span class="expires">Expires : 5/29/11<%#= @payment.expiry.strftime("%m/%d/%y")[1..-1] %></span>
               </p>
               <p>
-                  <%= @payment.offer.product.style_description %> (<%= @payment.offer.product.color.titleize %>)<br>
+                  <%= @payment.offer.product.style_description %> (<%= @payment.offer.product.color.titleize %>)<br/>
                   Style#: <%= @payment.offer.product.style_num %>
               </p>
               <p class="terms">
