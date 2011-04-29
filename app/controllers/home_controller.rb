@@ -198,16 +198,18 @@ class HomeController < ApplicationController
 
 	def code_generation
     PromotionCode::PRICE_CODES.each do |price_code|
-      (1..100).each do |i|
-        @code = rand_code(16)
-        while(1)
-          if PromotionCode.find_by_code(@code)
-            @code = rand_code(16)
-          else
-            break;
+      unless PromotionCode::SPECIAL_CODES.include? price_code
+        (1..50000).each do |i|
+          @code = rand_code(16)
+          while(1)
+            if PromotionCode.find_by_code(@code)
+              @code = rand_code(16)
+            else
+              break;
+            end
           end
+          PromotionCode.create(:code => @code, :price_point => price_code,:used => false)
         end
-        PromotionCode.create(:code => @code, :price_point => price_code,:used => false)
       end
     end
     flash[:notice] = "Yuppy!! Codes Generated"
