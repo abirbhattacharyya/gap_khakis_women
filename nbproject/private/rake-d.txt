@@ -41,6 +41,7 @@ doc\:clobber_plugins=Remove plugin documentation
 doc\:clobber_rails=Remove rdoc products
 doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
+doc\:plugins\:acts_as_suggest=Generate documentation for the acts_as_suggest plugin
 doc\:plugins\:gvis=Generate documentation for the gvis plugin
 doc\:plugins\:mimetype-fu=Generate documentation for the mimetype-fu plugin
 doc\:rails=Build the RDOC HTML Files

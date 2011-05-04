@@ -21,7 +21,6 @@ class HomeController < ApplicationController
   def notifications
     @notifications = [["profile", current_user.profile.created_at], ["prices", current_user.products.last.created_at]]
     @notifications.sort!{|n1, n2| n2[1] <=> n1[1]}
-#    Notification.deliver_sendcoupon("abstartup@gmail.com")
   end
 
   def search
@@ -143,8 +142,8 @@ class HomeController < ApplicationController
 
 	def send_daily_report
 #    recipients = "abstartup@gmail.com, dhaval.parikh33@gmail.com, Summer_Riley@gap.com, Deepta_Banerjee@gap.com, Meena_Anvary@gap.com, dealkat2@gmail.com"
-    recipients = "abstartup@gmail.com, dhaval.parikh33@gmail.com"
-#    recipients = "mailtoankitparekh@gmail.com, dhaval.parikh33@gmail.com"
+#    recipients = "abstartup@gmail.com, dhaval.parikh33@gmail.com"
+    recipients = "mailtoankitparekh@gmail.com, dhaval.parikh33@gmail.com"
 
     start_time = DateTime.now.utc.beginning_of_day - 1.day
     end_time = DateTime.now.utc.end_of_day - 1.day
@@ -197,22 +196,57 @@ class HomeController < ApplicationController
   end
 
 	def code_generation
+    db_prices = PromotionCode.all(:group => "price_point").map(&:price_point)
+    db_codes = PromotionCode.all.map(&:code)
+    
     PromotionCode::PRICE_CODES.each do |price_code|
-      unless PromotionCode::SPECIAL_CODES.include? price_code
-        (1..50000).each do |i|
-          @code = rand_code(16)
-          while(1)
-            if PromotionCode.find_by_code(@code)
-              @code = rand_code(16)
-            else
-              break;
+      if((PromotionCode::SPECIAL_CODES.include? price_code) or db_prices.include? price_code)
+        #TODO anything
+      else
+        PromotionCode.transaction do
+          (1..200).each do |i|
+            code = rand_code(16)
+            while(1)
+              if db_codes.include?(code)
+                code = rand_code(16)
+              else
+                break;
+              end
             end
+            db_codes << code
+            PromotionCode.create(:code => code, :price_point => price_code,:used => false)
           end
-          PromotionCode.create(:code => @code, :price_point => price_code,:used => false)
         end
       end
     end
     flash[:notice] = "Yuppy!! Codes Generated"
     redirect_to root_path
   end
+
+	def create_file
+    @file1 = File.open("SAYURPRICE/44213-COMBINED.txt","r")  #15,35,71 - ommited
+
+		@counter = 1
+    @file1.each do |line|
+      if line
+#        render :text=>line and return false
+        line.match(/(.*?)\|([a-zA-Z0-9]*)/)
+        @keyword = $1
+        @keyword2 = $2
+
+				@promotions_codes = PromotionCode.new
+
+				@promotions_codes.code = @keyword
+				@promotions_codes.price_point = 24
+				@promotions_codes.used = false
+
+				@promotions_codes.save
+				break if @counter>=20000
+
+				@counter+=1
+      end
+    end
+		render :text=>"All done for #{@promotions_codes.price_point}" and return false
+  end
+  
 end

@@ -66,7 +66,7 @@
 function showNotification(message, messageType, time){
     /* we can custom by parameter setting */
     var messagePosition = 'top';
-    var backgroundColor = 'Red';
+    var backgroundColor = '#E8445C';
     var textColor = 'White'; //(messageType == 'error') ? 'Crimson' : '#000';//'#1E90FF';
     var removeButton = true;
 

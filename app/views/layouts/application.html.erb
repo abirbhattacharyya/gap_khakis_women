@@ -43,12 +43,12 @@
                     <%= content_tag(:li, link_to("Winners", winners_path), :class => ([winners_path].include? request.path) ? "current" : nil) %>
                 <% end %>
             </ul>
-            <% form_tag search_path do %>
-                <% content_tag :div, :class => "search" do %>
-                    <%= text_field_tag :keyword %>
-                    <%= submit_tag "Search" %>
-                <% end %>
-            <% end %>
+            <%# form_tag search_path do %>
+                <%# content_tag :div, :class => "search" do %>
+                    <%#= text_field_tag :keyword %>
+                    <%#= submit_tag "Search" %>
+                <%# end %>
+            <%# end %>
         </div><!-- #header -->
 
         <% content_tag :div, :id => "content" do %>
@@ -56,14 +56,11 @@
         <% end %>
 
         <div id="footer">
-            <div class="copyright">&copy; 2011 Gap Inc.</div>
+            <div class="copyright">&copy; 2011 Gap Inc.<span>engine by <a href="#">dealkat</a></span></div>
             <% content_tag :ul do %>
-                <%= content_tag(:li, "engine by dealkat") %>
+                
                 <%  if logged_in? %>
                   <%= content_tag(:li, link_to("Edit Profile", profile_path), :class => ([profile_path].include? request.path) ? "current" : nil) if current_user.profile %>
-                  <%#= content_tag(:li, link_to("Download", download_emails_path)) if Payment.count(:conditions => "email IS NOT NULL and email <> ''").to_i > 0 %>
-                <% else %>
-                  <%#= content_tag(:li, link_to("FAQ", faqs_path), :class => ([faqs_path].include? request.path) ? "current" : nil) %>
                 <% end %>
             <% end %>
             <% if Profile.first %>

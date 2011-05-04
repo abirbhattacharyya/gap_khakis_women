@@ -19,9 +19,8 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-    config.gem "rails",:version => '2.3.8'
-    config.gem "pdf-writer",:lib => "pdf/writer",:version => '1.1.8'
-    config.gem "gattica",:version => '0.4.1'
+#    config.gem "pdf-writer",:lib => "pdf/writer",:version => '1.1.8'
+#    config.gem "gattica",:version => '0.4.1'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

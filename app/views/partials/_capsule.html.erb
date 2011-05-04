@@ -3,7 +3,7 @@
 <% @last_offer = product.offers.last(:conditions => ["ip = ? and token = ?", request.remote_ip, offer_token]) %>
 <% @offer = product.offers.last(:conditions => ["ip = ? and token =? and response IS NULL", request.remote_ip, offer_token]) %>
 
-<div class="capsule2">
+<div class="capsule2 type-2">
     <div class="cinner">
         <h4><%= product.style_description.titleize %> (<%= product.color.titleize %>)</h4>
         <h5><%= product.description[0] %></h5>
@@ -15,14 +15,12 @@
                   <% for product_image in product.images[1..-1] %>
                     <%= link_to("", (product_image), :title => "#{product.style_description.titleize} (#{product.color_description.titleize})", :rel => "lightbox[#{product.style_description.titleize.gsub(/\s+/, '')}]") %>
                   <% end %>
-                </div>
+                </div>                
             </span>
-            <p>
-                Share:
-                <%= link_to(image_tag("/images/icons/twitter-20x20px.gif", :size => "15x14", :alt => "Twitter", :title => "Twitter"), "http://twitter.com/home?status=I just scored a sweet deal on Gap khakis! You can too. Say your price now at www.gapmyprice.com", :target => "_new") %>
-                <%= link_to(image_tag("/images/icons/facebook-20x20px.gif", :size => "15x14", :alt => "Facebook", :title => "Facebook"), "http://www.facebook.com/sharer.php?u=#{root_url}&t=Say your price", :target => "_new") %>
-                <%#= link_to(image_tag("/images/icons/email-20x20px.gif", :size => "15x14", :alt => "Email", :title => "Email"), send_to_path(product.id)) %>
-            </p>
+            
+            <div class="fb-bend">
+              <%= link_to("Twitter", "http://twitter.com/home?status=I just scored a sweet deal on Gap khakis! You can too. Say your price now at www.gapmyprice.com", :target => "_new",:class=>"twitter") %>              
+          </div>
         </div><!-- .view -->
 
         <div class="info">
@@ -54,7 +52,7 @@
                                   <%= hidden_field_tag(:submit_button, "counter") %>
                                   <h2 class="long"><%= (@last_offer.counter?) ? "Current Offer" : "Best Offer" %> : <%= (@last_offer.price.ceil > 0) ? "$" + number_with_delimiter(@last_offer.price.ceil) : "Free of cost" %></h2>
                                   <p class="ctrl">
-                                      <label>Accept the deal?</label>
+                                      
                                       <span class="button-green-ctrl"><%= button_to_function("Yes", "var f = document.forms['submit_form'];$('submit_button').value='yes';f.submit();return false;") %></span>
                                       <span class="button-red-ctrl"><%= button_to_function("No", "var f = document.forms['submit_form'];$('submit_button').value='no';f.submit();return false;") %></span>
                                   </p>
@@ -91,7 +89,7 @@
                                   <%= text_field_tag :price, '', :class => "w120px", :maxLength => 2, :onKeyPress => "return keyAllowed(event,'0123456789')", :onblur => "this.value=removeChars(this.value)" %>
                               </p>
                               <p class="ctrls">
-                                  <span class="button-green-ctrl"><%= submit_tag "Go!" %></span>
+                                  <span class="button-green-ctrl-fat"><%= submit_tag "Go!" %></span>
                               </p>
                           <% end %>
                       <% end %>
