@@ -1,5 +1,5 @@
 <%= render :partial => "/partials/my_dashboard" %>
-<h1>My previous action= <%= distance_of_time_in_words(Time.now, @notifications[0][1]) %> ago</h1>
+<h1>My previous action= <%= distance_of_time_in_words(Time.now.utc - @notifications[0][1].utc) %> ago</h1>
 <div class="columns">
     <div class="column wide">
         <div class="capsule">

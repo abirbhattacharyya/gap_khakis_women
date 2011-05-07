@@ -1,4 +1,4 @@
-<h1>Congrats! You won a pair of khakis for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price) : "Free" %>. See you at the store.</h1>
+<h1>Congrats! You won. See you at the store.</h1>
 <div class="columns">
     <div class="column widest">
         <div class="capsule2 inline w550px">
@@ -6,11 +6,12 @@
               <h2>Coupon# <%=@payment.promotion_code.code %></h2>
               <div class="divider"></div>
               <p>
-                  Your Price: <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %>
+                  Your Price: <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %><br/>
+                  You Saved: <%= (@payment.offer.price > 0) ? number_to_currency((@payment.offer.product.ticketed_retail - @payment.offer.price), :precision => 2) : "Free" %><br/>
                   <span class="expires">Expires : 5/29/11<%#= @payment.expiry.strftime("%m/%d/%y")[1..-1] %></span>
               </p>
               <p>
-                  <%= @payment.offer.product.style_description %> (<%= @payment.offer.product.color.titleize %>)<br/>
+                  <%= @payment.offer.product.style_description %><%#= " (" +  @payment.offer.product.color.titleize + ")" %><br/>
                   Style#: <%= @payment.offer.product.style_num %>
               </p>
               <p class="terms">

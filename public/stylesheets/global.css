@@ -514,32 +514,6 @@ INPUT[type="submit"] {
                 background: url(/images/buttons/button-play.png) -70px 0px no-repeat;
                 }
 
-        .capsule2.type-2 .fb-bend {
-            overflow: hidden;
-            }
-
-            .capsule2.type-2 .fb-bend .holder {
-                border: 1px solid #eee;
-                width: 200px;
-                height: 35px;
-                float: left;
-                }
-
-            .capsule2.type-2 .fb-bend .twitter {
-                text-indent: -999px;
-                background: url(/images/buttons/fb-twitter.gif) top left no-repeat;
-                margin-left: 10px;
-                width: 37px;
-                height: 36px;
-                float: left;
-                }
-
-            .capsule2.type-2 .fb-bend .twitter:hover {
-                filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
-                opacity: 0.7;
-                -moz-opacity: 0.7;
-                }
-
         .capsule2 .view P {
             color: #111541;
             line-height: 18px;
@@ -582,6 +556,36 @@ INPUT[type="submit"] {
         .capsule2 .info P {
             line-height: 1.5em;
             }
+
+.fb-bend {
+    overflow: hidden;
+    }
+
+    .fb-bend .holder {
+        border: 1px solid #eee;
+        width: 200px;
+        height: 35px;
+        float: left;
+        }
+
+    .fb-bend .twitter,
+    .fb-bend .facebook {
+        text-indent: -999px;
+        margin-left: 10px;
+        width: 37px;
+        height: 36px;
+        float: left;
+        }
+
+    .fb-bend .twitter { background: url(/images/buttons/fb-twitter.gif) top left no-repeat; }
+    .fb-bend .facebook { background: url(/images/buttons/fb-facebook.gif) top left no-repeat; }
+
+    .fb-bend .twitter:hover,
+    .fb-bend .facebook:hover {
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+        opacity: 0.7;
+        -moz-opacity: 0.7;
+        }
 
 .paging {
     *border: 1px solid #fff; /* IE7 fix */
@@ -686,6 +690,13 @@ INPUT[type="submit"] {
         margin: 0 1em;
         display: inline-block;
         }
+    .feed-ctrls .share-line A:hover {
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+        opacity: 0.7;
+        -moz-opacity: 0.7;
+        }
+
+    .feed .fb-bend { margin: 1em 20px; }
 
 .expires {
     color: #e54145;

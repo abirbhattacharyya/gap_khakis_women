@@ -15,3 +15,9 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+FB_LIKE_URL = "gapmyprice.com"
+#TWITTER_SHARE_URL = "http://apps.facebook.com/newrailsapp"
+#FACEBOOK_SHARE_URL = "http://apps.facebook.com/newrailsapp"
+#MAILER_HOST = "http://apps.facebook.com/newrailsapp"
+#FB_ROOT_PATH = "http://apps.facebook.com/newrailsapp"

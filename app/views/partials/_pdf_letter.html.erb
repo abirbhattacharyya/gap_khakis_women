@@ -1,14 +1,15 @@
 <% @payment = pdf_letter %>
 
 
-<b>Congrats! You won a pair of khakis for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price) : "Free" %>. See you at the store.</b>
+<b>Congrats! You won. See you at the store.</b>
 ------------------------------------------------------------------------------------------------
 
 <b>Coupon# <%=@payment.promotion_code.code %></b>
 
 Your Price: <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %>
+You Saved: <%= (@payment.offer.price > 0) ? number_to_currency((@payment.offer.product.ticketed_retail - @payment.offer.price), :precision => 2) : "Free" %>
 
-<%= @payment.offer.product.style_description %> (<%= @payment.offer.product.color.titleize %>)
+<%= @payment.offer.product.style_description %><%#= " (" +  @payment.offer.product.color.titleize + ")" %>
 Style#: <%= @payment.offer.product.style_num %>
 Expires : 5/29/11<%#= @payment.expiry.strftime("%m/%d/%y")[1..-1] %>
 

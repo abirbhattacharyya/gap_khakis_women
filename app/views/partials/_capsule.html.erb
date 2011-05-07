@@ -5,21 +5,22 @@
 
 <div class="capsule2 type-2">
     <div class="cinner">
-        <h4><%= product.style_description.titleize %> (<%= product.color.titleize %>)</h4>
-        <h5><%= product.description[0] %></h5>
+        <h4><%= product.style_description.titleize %><%#= " (" +  product.color.titleize + ")" %></h4>
+        <h5><%= product.show_item %></h5>
 
         <div class="view">
             <span class="preview">
-                <%= link_to(image_tag((product.images.first), :size => "215x290"), (product.images.first), :title => "#{product.style_description.titleize} (#{product.color.titleize})", :rel => "lightbox[#{product.style_description.titleize.gsub(/\s+/, '')}]") %>
+                <%= link_to(image_tag((product.images.first), :size => "215x290"), (product.images.first), :title => "#{product.style_description.titleize}", :rel => "lightbox[#{product.style_description.titleize.gsub(/\s+/, '')}]") %>
                 <div style="display: none">
                   <% for product_image in product.images[1..-1] %>
-                    <%= link_to("", (product_image), :title => "#{product.style_description.titleize} (#{product.color_description.titleize})", :rel => "lightbox[#{product.style_description.titleize.gsub(/\s+/, '')}]") %>
+                    <%= link_to("", (product_image), :title => "#{product.style_description.titleize}", :rel => "lightbox[#{product.style_description.titleize.gsub(/\s+/, '')}]") %>
                   <% end %>
                 </div>                
             </span>
             
             <div class="fb-bend">
-              <%= link_to("Twitter", "http://twitter.com/home?status=I just scored a sweet deal on Gap khakis! You can too. Say your price now at www.gapmyprice.com", :target => "_new",:class=>"twitter") %>              
+              <%= link_to("Facebook", "http://www.facebook.com/sharer.php?u=#{FB_LIKE_URL}&t=Say your price", :target => "_new",:class => "facebook") %>
+              <%= link_to("Twitter", "http://twitter.com/home?status=Let’s make a deal on women’s clothes. Say Your Price http://gapmyprice.com/", :target => "_new",:class => "twitter") %>
           </div>
         </div><!-- .view -->
 
@@ -103,7 +104,7 @@
             <div class="divider"></div>
 
             <p><%= "Regular Price : " + number_to_currency(product.ticketed_retail, :precision => 2) %></p>
-            <div><%= product.description[1] %></div>
+            <div><%#= product.description[1] %><%=show_description(product.id)%></div>
             <p><%= link_to(capsule_url(product.id.to_s), capsule_path(product.id), :class => "myprice") %></p>
         </div><!-- .info -->
     </div><!-- .cinner -->

@@ -224,7 +224,7 @@ class HomeController < ApplicationController
   end
 
 	def create_file
-    @file1 = File.open("SAYURPRICE/44213-COMBINED.txt","r")  #15,35,71 - ommited
+    @file1 = File.open("public/44173-CROSSBRAND-01_$55.txt","r")  #15,35,71 - ommited
 
 		@counter = 1
     @file1.each do |line|
@@ -237,7 +237,7 @@ class HomeController < ApplicationController
 				@promotions_codes = PromotionCode.new
 
 				@promotions_codes.code = @keyword
-				@promotions_codes.price_point = 24
+				@promotions_codes.price_point = 55
 				@promotions_codes.used = false
 
 				@promotions_codes.save
