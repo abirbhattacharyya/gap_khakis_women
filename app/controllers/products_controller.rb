@@ -208,31 +208,14 @@ class ProductsController < ApplicationController
               @last_offer = @product.offers.last(:conditions => ["ip = ? and token = ?", request.remote_ip, offer_token])
               
               if(price <= @product.min_price)
-#                if avg_offer.avg_price
-#                  if avg_offer.avg_price.to_f >= @product.target_price
-#                    @price_codes = @product.min_price_points.delete_if {|v| v <= price}
-#                    @new_offer = @price_codes[rand(999)%@price_codes.size]
-#                    if price >= @new_offer
-#                      Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "accepted", :counter => 1)
-#                      flash[:notice] = "Cool, come on down to the store!"
-#                    else
-#                      Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "counter", :counter => 1)
-#                      flash[:notice] = "Hi, we can do $#{@new_offer}. Deal?"
-#                    end
-#                  else
-#                    @new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
-#                    Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
-#                    flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
-#                  end
-#                else
-                  #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
-                  @new_offer = @product.new_price_points[@product.new_price_points.size - 1]
-                  #render :text => [@last_offer, @new_offer].inspect and return false
-                  Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
-                  flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
-#                end
+                #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
+                @new_offer = @product.new_price_points[@product.new_price_points.size - 1]
+                #render :text => [@last_offer, @new_offer].inspect and return false
+                Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
+                flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
               elsif(price >= @product.ticketed_retail.to_f)
-                @new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
+                #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
+                @new_offer = @product.new_price_points[@product.new_price_points.size - 1]
                 @counter_offer = Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
                 for offer in @product.offers.all(:conditions => ["ip = ? and token = ? and id <= ? and (response IS NULL OR response LIKE 'counter')", request.remote_ip, offer_token, @last_offer.id])
                   offer.update_attribute(:response, "expired") #unless ["paid", "accepted", "rejected"].include? offer.response
@@ -253,14 +236,15 @@ class ProductsController < ApplicationController
                   if @price_codes.size > 0
                     @new_offer = @price_codes[rand(999)%@price_codes.size]
                   else
-                    @new_offer = @product.min_price_points.first
+                    #@new_offer = @product.min_price_points.first
+                    @new_offer = @product.min_price_points[0]
                   end
                   @new_offer = @product.target_price if @new_offer.nil?
                 end
                 if @new_offer == @product.target_price
                   Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
                   flash[:notice] = "Hey, the best we can do is $#{@new_offer}. Deal?"
-                elsif price > @new_offer
+                elsif price >= @new_offer
                   Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "accepted", :counter => 1)
                   flash[:notice] = "Cool, come on down to the store!"
                 else
