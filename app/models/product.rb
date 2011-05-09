@@ -32,7 +32,7 @@ class Product < ActiveRecord::Base
     #"dealkat will write cool copy of eggsactly 70 characters no more no les"
   end
 
-  def self.new_price_points
+  def new_price_points
     price_codes = []
     for price_code in PromotionCode::PRICE_CODES
       price_codes << price_code if(price_code >= self.target_price and price_code < self.ticketed_retail)
@@ -45,7 +45,7 @@ class Product < ActiveRecord::Base
     return price_codes
   end
 
-  def self.min_price_points
+  def min_price_points
     price_codes = PromotionCode::PRICE_CODES
     price_codes.delete_if {|code| ((code >= self.target_price) or (code < PromotionCode::LOWEST_PRICES[self.ticketed_retail.to_s])) }
 #    for price_code in PromotionCode::PRICE_CODES
@@ -58,11 +58,11 @@ class Product < ActiveRecord::Base
     self.color_description.gsub(/\d+/, '').strip
   end
 
-  def self.target_price
+  def target_price
     (self.selling_price)
   end
 
-  def self.min_price
+  def min_price
     (self.ticketed_retail.to_f * 0.3).ceil
   end
 
