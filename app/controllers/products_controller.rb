@@ -204,13 +204,11 @@ class ProductsController < ApplicationController
                 return
               end
           else
-#              render :text => (price).inspect and return false
               Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => price, :counter => 1)
               @last_offer = @product.offers.last(:conditions => ["ip = ? and token = ?", request.remote_ip, offer_token])
               if(price <= @product.min_price)
                 #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
                 @new_offer = @product.new_price_points[@product.new_price_points.size - 1]
-                #render :text => [@last_offer, @new_offer].inspect and return false
                 Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
                 flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
               elsif(price >= @product.new_price_points.last)
