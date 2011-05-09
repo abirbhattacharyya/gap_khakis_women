@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
             CSV::Reader.parse(File.open("#{file_path}", 'rb')) do |row|
                 product = Product.new
                 product.user = current_user
-                if row.size == 8
+                if row.size.to_i == 8
                     if row[0]
                       product.style_num = row[0].strip.gsub(/\D+/, '')
                       product.style_description = row[1].to_s
@@ -185,8 +185,8 @@ class ProductsController < ApplicationController
                       end
                     end
                     @offer.update_attributes(:price => price, :counter => (@offer.counter + 1))
-                    if @price_codes.size > 0
-                      @new_offer = @price_codes[rand(999)%@price_codes.size]
+                    if @price_codes.size.to_i > 0
+                      @new_offer = @price_codes[rand(999)%@price_codes.size.to_i]
                       if @new_offer == @last_offer.price or @new_offer <= price
                         @last_offer.update_attributes(:price => @new_offer, :response => "last")
                       else
@@ -208,12 +208,12 @@ class ProductsController < ApplicationController
               last_price_point = @product.new_price_points[@product.new_price_points.size.to_i - 1]
               @last_offer = @product.offers.last(:conditions => ["ip = ? and token = ?", request.remote_ip, offer_token])
               if(price <= @product.min_price)
-                #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
+                #@new_offer = @product.new_price_points.last #[@product.new_price_points.size.to_i - 1]
                 @new_offer = @product.new_price_points[@product.new_price_points.size.to_i - 1]
                 Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
                 flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
               elsif(price >= last_price_point)
-                #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
+                #@new_offer = @product.new_price_points.last #[@product.new_price_points.size.to_i - 1]
                 @new_offer = last_price_point
                 if price == @new_offer
                   Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "accepted", :counter => 1)
@@ -228,7 +228,7 @@ class ProductsController < ApplicationController
               else
                 if avg_offer.avg_price.nil?
                   @price_codes = @product.new_price_points.delete_if {|v| v <= price}
-                  @new_offer = @price_codes[rand(999)%@price_codes.size]
+                  @new_offer = @price_codes[rand(999)%@price_codes.size.to_i]
                 else
                   @price_codes = @product.new_price_points.delete_if {|v| v <= price}
                   if price < @product.target_price
@@ -238,8 +238,8 @@ class ProductsController < ApplicationController
                       @price_codes = @product.min_price_points.delete_if {|v| v <= price}
                     end
                   end
-                  if @price_codes.size > 0
-                    @new_offer = @price_codes[rand(999)%@price_codes.size]
+                  if @price_codes.size.to_i > 0
+                    @new_offer = @price_codes[rand(999)%@price_codes.size.to_i]
                   else
                     #@new_offer = @product.min_price_points.first
                     @new_offer = @product.min_price_points[0]
