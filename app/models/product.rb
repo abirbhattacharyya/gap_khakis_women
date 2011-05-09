@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
 
   PRODUCT_ITEMS = {
 
-    1 => "Casual and elegant! Your special nighttime friend",
+    1 => "Casual and elegant, your special springtime friend!",
     2 => "Flowery and cool. Wear on your date by the pool!",
     3 => "Versatile and elegant.  Your work and after work friend",
     4 => "Your on the go pack it in and run companion!",
@@ -19,7 +19,7 @@ class Product < ActiveRecord::Base
     9 => "You will feel light and breezy and buying is easy!",
     10 => "Your sexy, spring and summer accessory!",
     11 => "Open up the possibilities with this colorful accessory",
-    12 => "Your fave Winter accesory springs to summer with color",
+    12 => "Your favorite winter accessory springs to summer with color",
     13 => "Work or play, your skinny jean's BFF",
     14 => "Kick back and relax in this vintage tee",
     15 => "Goes with anything you want to wear"
