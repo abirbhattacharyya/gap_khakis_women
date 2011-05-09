@@ -216,11 +216,16 @@ class ProductsController < ApplicationController
               elsif(price >= @product.new_price_points[@product.new_price_points.size - 1])
                 #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
                 @new_offer = @product.new_price_points[@product.new_price_points.size - 1]
-                @counter_offer = Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
-                for offer in @product.offers.all(:conditions => ["ip = ? and token = ? and id <= ? and (response IS NULL OR response LIKE 'counter')", request.remote_ip, offer_token, @last_offer.id])
-                  offer.update_attribute(:response, "expired") #unless ["paid", "accepted", "rejected"].include? offer.response
+                if price == @new_offer
+                  Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "accepted", :counter => 1)
+                  flash[:notice] = "Cool, come on down to the store!"
+                else
+                  @counter_offer = Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
+                  for offer in @product.offers.all(:conditions => ["ip = ? and token = ? and id <= ? and (response IS NULL OR response LIKE 'counter')", request.remote_ip, offer_token, @last_offer.id])
+                    offer.update_attribute(:response, "expired") #unless ["paid", "accepted", "rejected"].include? offer.response
+                  end
+                  flash[:notice] = "Hey, don't overspend. Yours for only $#{@new_offer}"
                 end
-                flash[:notice] = "Hey, don't overspend. Yours for only $#{@new_offer}"
               else
                 if avg_offer.avg_price.nil?
                   @price_codes = @product.new_price_points.delete_if {|v| v <= price}
