@@ -213,7 +213,7 @@ class ProductsController < ApplicationController
                 #render :text => [@last_offer, @new_offer].inspect and return false
                 Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
                 flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
-              elsif(price >= @product.ticketed_retail.to_f)
+              elsif(price >= @product.new_price_points[@product.new_price_points.size - 1])
                 #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
                 @new_offer = @product.new_price_points[@product.new_price_points.size - 1]
                 @counter_offer = Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
@@ -223,7 +223,8 @@ class ProductsController < ApplicationController
                 flash[:notice] = "Hey, don't overspend. Yours for only $#{@new_offer}"
               else
                 if avg_offer.avg_price.nil?
-                  @new_offer = @product.new_price_points[rand(999)%@product.new_price_points.size]
+                  @price_codes = @product.new_price_points.delete_if {|v| v <= price}
+                  @new_offer = @price_codes[rand(999)%@price_codes.size]
                 else
                   @price_codes = @product.new_price_points.delete_if {|v| v <= price}
                   if price < @product.target_price
