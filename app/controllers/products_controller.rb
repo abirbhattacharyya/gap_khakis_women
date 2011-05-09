@@ -139,8 +139,6 @@ class ProductsController < ApplicationController
         redirect_to root_path
         return
       end
-      #render :text => PromotionCode::LOWEST_PRICES[@product.ticketed_retail.to_s].inspect and return false
-      #render :text => @product.min_price_points.inspect and return false
       offer_token = (session[:_csrf_token] ||= ActiveSupport::SecureRandom.base64(32))
 
       @last_offer = @product.offers.last(:conditions => ["ip = ? and token = ?", request.remote_ip, offer_token])
@@ -227,7 +225,9 @@ class ProductsController < ApplicationController
 #                    flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
 #                  end
 #                else
-                  @new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
+                  #@new_offer = @product.new_price_points.last #[@product.new_price_points.size - 1]
+                  @new_offer = @product.new_price_points[@product.new_price_points.size - 1]
+                  #render :text => [@last_offer, @new_offer].inspect and return false
                   Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
                   flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
 #                end
@@ -260,7 +260,7 @@ class ProductsController < ApplicationController
                 if @new_offer == @product.target_price
                   Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
                   flash[:notice] = "Hey, the best we can do is $#{@new_offer}. Deal?"
-                elsif price >= @new_offer
+                elsif price > @new_offer
                   Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "accepted", :counter => 1)
                   flash[:notice] = "Cool, come on down to the store!"
                 else
