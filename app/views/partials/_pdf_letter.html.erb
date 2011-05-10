@@ -1,7 +1,7 @@
 <% @payment = pdf_letter %>
 
 
-<b>Congrats! You won. See you at the store.</b>
+<b>Congrats! You Won <%= @payment.offer.product.style_description %> for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %></b>
 ------------------------------------------------------------------------------------------------
 
 <b>Coupon# <%=@payment.promotion_code.code %></b>
