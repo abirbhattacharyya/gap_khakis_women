@@ -33,10 +33,14 @@ class Product < ActiveRecord::Base
   end
 
   def new_price_points
+#    price_codes = PromotionCode::PRICE_CODES
+#    price_codes.delete_if {|code| ((code < self.target_price) or (code > self.ticketed_retail)) }
+    
     price_codes = []
     for price_code in PromotionCode::PRICE_CODES
       price_codes << price_code if(price_code >= self.target_price and price_code < self.ticketed_retail)
     end
+#    
 #    if price_codes.empty?
 #      index = PromotionCode::PRICE_CODES.index{|x| x > self.ticketed_retail}
 #      index = index.nil? ? (PromotionCode::PRICE_CODES.size - 1 ) :  (index - 1)
@@ -46,11 +50,13 @@ class Product < ActiveRecord::Base
   end
 
   def min_price_points
-    price_codes = PromotionCode::PRICE_CODES
-    price_codes.delete_if {|code| ((code >= self.target_price) or (code < PromotionCode::LOWEST_PRICES[self.ticketed_retail.to_s])) }
-#    for price_code in PromotionCode::PRICE_CODES
-#      price_codes << price_code if price_code < self.target_price
-#    end
+#    price_codes = PromotionCode::PRICE_CODES
+#    price_codes.delete_if {|code| ((code >= self.target_price) or (code < PromotionCode::LOWEST_PRICES[self.ticketed_retail.to_s])) }
+
+    price_codes = []
+    for price_code in PromotionCode::PRICE_CODES
+      price_codes << price_code if(price_code < self.target_price and price_code >= PromotionCode::LOWEST_PRICES[self.ticketed_retail.to_s])
+    end
     return price_codes
   end
 
