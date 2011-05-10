@@ -102,7 +102,7 @@ module ProductsHelper
           </ul>
           <h5 class='list'>fit & sizing</h5>
           <ul class='list'>
-            <li>Hits mid-thigh.</li>
+            <li>Hits at the hips</li>
           </ul>"
      when 6
        response = "<h5>fabric & care</h5>
@@ -276,7 +276,26 @@ module ProductsHelper
           <ul class='list'>
             <li>Hits at the hips.</li>
           </ul>"
+       when 15
+       response = "<h5>fabric & care</h5>
+          <ul class='list'>
+            <li>60% Cotton/ 40% Modal</li>
+            <li>Machine wash cold Gentle Cycle. Only Non-chlorine bleach. When Needed, Tumble Dry Low. Cool Iron.</li>            
+          </ul>
+          <h5 >overview</h5>
+          <ul class='list'>
+            <li>Imported.</li>
+          </ul>
+          <h5 class='list'>fit & sizing</h5>
+          <ul class='list'>
+            <li>Cap sleeves.</li>
+            <li>U-neck.</li>
+            <li>Hits at the hips.</li>
+          </ul>"
      end
+
+     response.gsub!("<li>Petite Fit Guide</li>","")
+     response.gsub!("<li>Tall Fit Guide</li>","")
      return response
 
    end

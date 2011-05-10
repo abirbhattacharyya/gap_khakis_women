@@ -28,7 +28,8 @@ class Product < ActiveRecord::Base
 
 
   def show_item
-    return PRODUCT_ITEMS[self.id]
+    #return PRODUCT_ITEMS[self.id]
+    return nil
     #"dealkat will write cool copy of eggsactly 70 characters no more no les"
   end
 
