@@ -239,6 +239,23 @@ module ProductsHelper
             <li>Bobble tassels at ends.</li>
             <li>Allover bleeding stripes.</li>
           </ul>"
+     
+     when 13
+       response = "<h5>fabric & care</h5>
+          <ul class='list'>
+            <li>100% Suede.</li>
+            <li>Wipe clean.</li>
+            <li>Imported.</li>
+          </ul>
+          <h5 >overview</h5>
+          <ul class='list'>
+            <li>Back zip..</li>
+            <li>Allover bleeding stripes.</li>
+          </ul>
+          <h5 class='list'>fit & sizing</h5>
+          <ul class='list'>
+            <li>Hits at ankle.</li>
+          </ul>"
        when 14
        response = "<h5>fabric & care</h5>
           <ul class='list'>
