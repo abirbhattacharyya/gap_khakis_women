@@ -209,7 +209,7 @@ class ProductsController < ApplicationController
               @last_offer = @product.offers.last(:conditions => ["ip = ? and token = ?", request.remote_ip, offer_token])
               if(price <= @product.min_price)
                 #@new_offer = @product.new_price_points.last #[@product.new_price_points.size.to_i - 1]
-                @new_offer = @product.new_price_points[@product.new_price_points.size.to_i - 1]
+                @new_offer = last_price_point
                 Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "last", :counter => 1)
                 flash[:notice] = "Hi, $#{price} is too low. How about $#{@new_offer}?"
               elsif(price >= last_price_point)
