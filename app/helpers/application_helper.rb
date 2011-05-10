@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def analytics_details(from, to)
-    gs = Gattica.new({:email => 'dealkat@gmail.com', :password => "princessthecat", :profile_id => 42948679})
+    gs = Gattica.new({:email => 'dealkat@gmail.com', :password => "princessthecat", :profile_id => 45749312})
     results = gs.get({:start_date => from.to_s, :end_date => to.to_s,
                 :dimensions => ['medium', 'source'], :metrics => ['pageviews', 'visits', 'timeOnSite'], :sort => '-pageviews'})
     @xml_data = results.to_xml

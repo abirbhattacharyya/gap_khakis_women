@@ -216,7 +216,7 @@ class ProductsController < ApplicationController
               elsif(price >= last_price)
                 #@new_offer = @product.new_price_points.last #[@product.new_price_points.size.to_i - 1]
                 @new_offer = last_price
-                if price == @new_offer
+                if price ==  @new_offer
                   Offer.create(:ip => request.remote_ip, :token => offer_token, :product_id => @product.id, :price => @new_offer, :response => "accepted", :counter => 1)
                   flash[:notice] = "Cool, come on down to the store!"
                 else
@@ -243,7 +243,7 @@ class ProductsController < ApplicationController
                     @new_offer = @price_codes[rand(999)%@price_codes.size.to_i]
                   else
                     #@new_offer = @product.min_price_points.first
-                    @new_offer = @product.min_price_points[0]
+                    @new_offer = price
                   end
                   @new_offer = @product.target_price if @new_offer.nil?
                 end

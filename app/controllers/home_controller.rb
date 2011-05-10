@@ -162,7 +162,7 @@ class HomeController < ApplicationController
       @all_coupons[price_code] = all_coupons.total
     end
 
-    @analytics_overall = analytics_details('2011-03-02', @today.to_date)
+    @analytics_overall = analytics_details('2011-05-10', @today.to_date)
     @analytics_today = analytics_details(@today.to_date, @today.to_date)
 
     Notification.deliver_dailyreport(recipients,@todays_coupons,@all_coupons,@analytics_today,@analytics_overall,@today.to_date)
@@ -190,7 +190,7 @@ class HomeController < ApplicationController
 #    @todays_coupons = Offer.all(:select => "COUNT(id) as total, price", :conditions => ["(updated_at >= ? and updated_at <= ?) and response LIKE 'paid'", start_time, end_time], :group => "price")
 #    @all_coupons = Offer.all(:select => "COUNT(id) as total, price", :conditions => ["response LIKE 'paid' and updated_at <= ?", DateTime.now.utc], :group => "price")
 
-    @analytics_overall = analytics_details('2011-03-02', @today.to_date)
+    @analytics_overall = analytics_details('2011-05-10', @today.to_date)
     @analytics_today = analytics_details(@today.to_date, @today.to_date)
     render :layout => false
   end
