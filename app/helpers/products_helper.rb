@@ -102,7 +102,7 @@ module ProductsHelper
           </ul>
           <h5 class='list'>fit & sizing</h5>
           <ul class='list'>
-            <li>Hits at the hips</li>
+            <li>Hits below the hips.</li>
           </ul>"
      when 6
        response = "<h5>fabric & care</h5>
@@ -225,7 +225,7 @@ module ProductsHelper
           </ul>
           <h5 class='list'>fit & sizing</h5>
           <ul class='list'>
-            <li>Hits at the hips</li>
+            <li>Hits at the hips.</li>
           </ul>"
      when 12
        response = "<h5>fabric & care</h5>
@@ -249,7 +249,7 @@ module ProductsHelper
           </ul>
           <h5 >overview</h5>
           <ul class='list'>
-            <li>Back zip..</li>
+            <li>Back zip.</li>
             <li>Allover bleeding stripes.</li>
           </ul>
           <h5 class='list'>fit & sizing</h5>
@@ -279,16 +279,17 @@ module ProductsHelper
        when 15
        response = "<h5>fabric & care</h5>
           <ul class='list'>
-            <li>60% Cotton/ 40% Modal</li>
-            <li>Machine wash cold Gentle Cycle. Only Non-chlorine bleach. When Needed, Tumble Dry Low. Cool Iron.</li>            
+            <li>60% Cotton, 40% Modal</li>
+            <li>Machine wash.</li>
           </ul>
           <h5 >overview</h5>
           <ul class='list'>
             <li>Imported.</li>
+            <li>Cap sleeves.</li>
           </ul>
           <h5 class='list'>fit & sizing</h5>
           <ul class='list'>
-            <li>Cap sleeves.</li>
+            
             <li>U-neck.</li>
             <li>Hits at the hips.</li>
           </ul>"

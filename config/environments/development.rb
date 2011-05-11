@@ -21,7 +21,8 @@ ActionMailer::Base.smtp_settings = {
   :port => 587,
   :authentication => :plain,
   :user_name => "testing.dealkat@gmail.com",
-  :password => "princessthecat"
+  :password => "princessthecat",
+  :enable_starttls_auto => true
 }
 
 FB_LIKE_URL = "gapmyprice.com"
