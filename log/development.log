@@ -2551,3 +2551,386 @@ Rendered partials/_capsule (16.9ms)
   [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
 Completed in 66ms (View: 39, DB: 6) | 200 OK [http://localhost/15]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM `products` ORDER BY products.id DESC LIMIT 1[0m
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.7ms)[0m   [0mSELECT * FROM `products` LIMIT 1[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` ORDER BY products.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 12:26:22) [POST]
+  Parameters: {"price"=>"15", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"15"}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '15') LIMIT 1[0m
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 15 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.5ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(15.0, NULL, '2011-05-11 06:56:22', 15, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:56:22', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.3ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(19.0, 'counter', '2011-05-11 06:56:22', 15, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:56:22', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (115.8ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 200ms (View: 143, DB: 12) | 200 OK [http://localhost/15]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 12:26:24) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"15", "submit_button"=>"yes"}
+  [4;36;1mProduct Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '15') LIMIT 1[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:56:24', `response` = 'accepted' WHERE `id` = 155[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 155 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 15) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.3ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:56:24', `response` = 'expired' WHERE `id` = 154[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (15.2ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 91ms (View: 36, DB: 9) | 200 OK [http://localhost/15]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-11 12:26:26) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"155"}
+  [4;35;1mOffer Columns (16.5ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 155) LIMIT 1[0m
+  [4;35;1mPayment Load (0.6ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.offer_id = 155) LIMIT 1[0m
+  [4;36;1mPromotionCode Load (741.4ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (price_point = 19.0 and used = 0) LIMIT 1[0m
+  [4;35;1mPromotionCode Columns (59.9ms)[0m   [0mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;36;1mPayment Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Create (0.9ms)[0m   [0;1mINSERT INTO `payments` (`created_at`, `updated_at`, `expiry`, `offer_id`, `promotion_code_id`, `email`) VALUES('2011-05-11 06:56:27', '2011-05-11 06:56:27', NULL, 155, 605369, NULL)[0m
+  [4;35;1mSQL (9.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Update (0.4ms)[0m   [0mUPDATE `payments` SET `updated_at` = '2011-05-11 06:56:27', `expiry` = '2011-05-18 06:56:27' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPromotionCode Update (0.9ms)[0m   [0;1mUPDATE `promotion_codes` SET `updated_at` = '2011-05-11 06:56:27', `used` = 1 WHERE `id` = 605369[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.5ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:56:27', `response` = 'paid' WHERE `id` = 155[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 155) [0m
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 15) [0m
+  [4;36;1mPromotionCode Load (0.4ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 605369) [0m
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 974ms (View: 72, DB: 839) | 200 OK [http://localhost/payment/155]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#download_pdf (for 127.0.0.1 at 2011-05-11 12:27:39) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mPayment Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mPayment Load (0.5ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.`id` = '15') LIMIT 1[0m
+  [4;36;1mOffer Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 155) [0m
+  [4;36;1mProduct Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 15) [0m
+  [4;36;1mPromotionCode Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPromotionCode Load (0.1ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 605369) [0m
+Rendered partials/_pdf_letter (46.6ms)
+Sending data mypricecoupon.pdf
+Completed in 459ms (View: 2, DB: 0) | 200 OK [http://localhost/download_pdf/15]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-11 12:28:41) [POST]
+  Parameters: {"commit"=>"Email Coupon", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"15", "payment"=>{"email"=>"brijeshshah86@gmail.com"}}
+  [4;35;1mPayment Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mPayment Load (0.6ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.`id` = 15) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Update (0.5ms)[0m   [0;1mUPDATE `payments` SET `updated_at` = '2011-05-11 06:58:41', `email` = 'brijeshshah86@gmail.com' WHERE `id` = 15[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 155) [0m
+  [4;36;1mProduct Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 15) [0m
+  [4;36;1mPromotionCode Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPromotionCode Load (0.1ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 605369) [0m
+Sent mail to 
+
+Date: Wed, 11 May 2011 12:28:41 +0530
+From: Gapmyprice <myprice@gapmyprice.com>
+Reply-To: custserv@gap.com
+Bcc: brijeshshah86@gmail.com
+Subject: Your Say Your Price Coupon
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+<h1>Congrats! You Won an U-Neck Stripe Tee for $19</h1>
+<div class="columns">
+    <div class="column widest">
+        <div class="capsule2 inline w550px">
+          <div class="cinner">
+              <h2>Coupon# LZHVGHPBXPHC</h2>
+              <div class="divider"></div>
+              <p>
+                  Your Price: $19<br/>
+                  You Saved: $0.95<br/>
+                  <span class="expires">Expires : 5/29/11</span>
+              </p>
+              <p>
+                  U-Neck Stripe Tee<br/>
+                  Style#: 839054
+              </p>
+              <p class="terms">
+                  <b>Terms and Conditions:</b>
+                  Offer valid in the U.S. only (including Puerto Rico) at Gap stores.
+                  Not valid at Gap Outlet, Gap Factory Store or The Gap Generation stores or online.
+                  Offer is good for one time use only and must be surrendered at time of in-store purchase.
+                  Discount applies to Gap Men's Khaki merchandise only, not to GiftCards or applicable taxes.
+                  No adjustments on previous purchases. Not valid for cash or cash equivalent.
+                  Offer cannot be combined with any other offers or discounts, including the Gap Inc.
+                  employee discount. Not responsible for lost or stolen coupons. Offer is not transferable.
+                  Cashiers: enter the code above to process the discount.
+              </p>
+            </div><!-- .cinner -->
+            <div class="ctl"></div><div class="ctc"></div><div class="ctr"></div>
+            <div class="cml"></div><div class="cmr"></div>
+            <div class="cbl"></div><div class="cbc"></div><div class="cbr"></div>
+        </div><!-- .capsule -->
+    </div><!-- .column.wide -->
+</div><!-- .columns -->
+
+<p>
+  Thank you from <a href="http://www.gapmyprice.com">Gapmyprice.com</a>
+</p>
+Redirected to http://localhost:3000/sayprice
+Completed in 7775ms (DB: 12) | 302 Found [http://localhost/payment/15]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-11 12:28:49) [GET]
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (29.6ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 83ms (View: 57, DB: 9) | 200 OK [http://localhost/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 12:29:36) [POST]
+  Parameters: {"price"=>"25", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.6ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(25.0, NULL, '2011-05-11 06:59:36', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:59:36', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(30.0, 'counter', '2011-05-11 06:59:36', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:59:36', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (25.4ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 141ms (View: 64, DB: 13) | 200 OK [http://localhost/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 12:29:40) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"yes"}
+  [4;35;1mProduct Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.3ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:59:40', `response` = 'accepted' WHERE `id` = 157[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Load (1.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 157 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.3ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:59:40', `response` = 'expired' WHERE `id` = 156[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (17.9ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 82ms (View: 36, DB: 9) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-11 12:29:41) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"157"}
+  [4;36;1mOffer Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.3ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 157) LIMIT 1[0m
+  [4;36;1mPayment Load (0.5ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.offer_id = 157) LIMIT 1[0m
+  [4;35;1mPromotionCode Load (450.2ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (price_point = 30.0 and used = 0) LIMIT 1[0m
+  [4;36;1mPromotionCode Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPayment Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Create (0.4ms)[0m   [0mINSERT INTO `payments` (`created_at`, `updated_at`, `expiry`, `offer_id`, `promotion_code_id`, `email`) VALUES('2011-05-11 06:59:41', '2011-05-11 06:59:41', NULL, 157, 385369, NULL)[0m
+  [4;36;1mSQL (9.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Update (0.5ms)[0m   [0;1mUPDATE `payments` SET `updated_at` = '2011-05-11 06:59:41', `expiry` = '2011-03-31' WHERE `id` = 16[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPromotionCode Update (17.8ms)[0m   [0mUPDATE `promotion_codes` SET `updated_at` = '2011-05-11 06:59:41', `used` = 1 WHERE `id` = 385369[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:59:41', `response` = 'paid' WHERE `id` = 157[0m
+  [4;35;1mSQL (22.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 157) [0m
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Load (0.3ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 385369) [0m
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 717ms (View: 53, DB: 510) | 200 OK [http://localhost/payment/157]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#download_pdf (for 127.0.0.1 at 2011-05-11 12:29:48) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mPayment Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mPayment Load (0.7ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.`id` = '16') LIMIT 1[0m
+  [4;35;1mOffer Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 157) [0m
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;36;1mPromotionCode Load (0.1ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 385369) [0m
+Rendered partials/_pdf_letter (60.4ms)
+Sending data mypricecoupon.pdf
+Completed in 402ms (View: 0, DB: 0) | 200 OK [http://localhost/download_pdf/16]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-11 12:29:51) [POST]
+  Parameters: {"commit"=>"Email Coupon", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"16", "payment"=>{"email"=>"brijeshshah86@gmail.com"}}
+  [4;36;1mPayment Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mPayment Load (0.5ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.`id` = 16) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Update (0.4ms)[0m   [0mUPDATE `payments` SET `updated_at` = '2011-05-11 06:59:51', `email` = 'brijeshshah86@gmail.com' WHERE `id` = 16[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 157) [0m
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;36;1mPromotionCode Load (0.2ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 385369) [0m
+Sent mail to 
+
+Date: Wed, 11 May 2011 12:29:51 +0530
+From: Gapmyprice <myprice@gapmyprice.com>
+Reply-To: custserv@gap.com
+Bcc: brijeshshah86@gmail.com
+Subject: Your Say Your Price Coupon
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+<h1>Congrats! You Won a Longsleeve Sheer Popover Shirt for $30</h1>
+<div class="columns">
+    <div class="column widest">
+        <div class="capsule2 inline w550px">
+          <div class="cinner">
+              <h2>Coupon# TTP3JRX8L2KF</h2>
+              <div class="divider"></div>
+              <p>
+                  Your Price: $30<br/>
+                  You Saved: $29.95<br/>
+                  <span class="expires">Expires : 5/29/11</span>
+              </p>
+              <p>
+                  Longsleeve Sheer Popover Shirt<br/>
+                  Style#: 834570
+              </p>
+              <p class="terms">
+                  <b>Terms and Conditions:</b>
+                  Offer valid in the U.S. only (including Puerto Rico) at Gap stores.
+                  Not valid at Gap Outlet, Gap Factory Store or The Gap Generation stores or online.
+                  Offer is good for one time use only and must be surrendered at time of in-store purchase.
+                  Discount applies to Gap Men's Khaki merchandise only, not to GiftCards or applicable taxes.
+                  No adjustments on previous purchases. Not valid for cash or cash equivalent.
+                  Offer cannot be combined with any other offers or discounts, including the Gap Inc.
+                  employee discount. Not responsible for lost or stolen coupons. Offer is not transferable.
+                  Cashiers: enter the code above to process the discount.
+              </p>
+            </div><!-- .cinner -->
+            <div class="ctl"></div><div class="ctc"></div><div class="ctr"></div>
+            <div class="cml"></div><div class="cmr"></div>
+            <div class="cbl"></div><div class="cbc"></div><div class="cbr"></div>
+        </div><!-- .capsule -->
+    </div><!-- .column.wide -->
+</div><!-- .columns -->
+
+<p>
+  Thank you from <a href="http://www.gapmyprice.com">Gapmyprice.com</a>
+</p>
+Redirected to http://localhost:3000/sayprice
+Completed in 6360ms (DB: 12) | 302 Found [http://localhost/payment/16]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-11 12:29:57) [GET]
+  [4;36;1mProduct Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `products` [0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (36.3ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 92ms (View: 72, DB: 6) | 200 OK [http://localhost/sayprice]

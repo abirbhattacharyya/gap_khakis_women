@@ -1,4 +1,5 @@
-<h1>Congrats! You Won a <%= @payment.offer.product.style_description %> for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %></h1>
+<%description = @payment.offer.product.style_description%>
+<h1>Congrats! You Won <%=description.first.downcase.match(/[aeiou]/) ? "an" : "a"%> <%= description %> for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %></h1>
 <div class="columns">
     <div class="column widest">
         <div class="capsule2 inline w550px">
@@ -11,7 +12,7 @@
                   <span class="expires">Expires : 5/29/11<%#= @payment.expiry.strftime("%m/%d/%y")[1..-1] %></span>
               </p>
               <p>
-                  <%= @payment.offer.product.style_description %><%#= " (" +  @payment.offer.product.color.titleize + ")" %><br/>
+                  <%=description %><%#= " (" +  @payment.offer.product.color.titleize + ")" %><br/>
                   Style#: <%= @payment.offer.product.style_num %>
               </p>
               <p class="terms">
