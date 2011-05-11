@@ -150,22 +150,22 @@ class HomeController < ApplicationController
 #    @today = DateTime.now.in_time_zone("Pacific Time (US & Canada)")
     @today = Date.today-1.day
 
-    @todays_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["(updated_at >= ? and updated_at <= ?) and response LIKE 'paid'", start_time, end_time]).total
-    @overall_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["response LIKE 'paid' and updated_at <= ?", DateTime.now.utc]).total
+    @todays_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["(updated_at >= ? and updated_at <= ?) and response LIKE 'paid'", start_time, end_time]).total.to_f
+    @overall_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["response LIKE 'paid' and updated_at <= ?", DateTime.now.utc]).total.to_f
 
     @todays_coupons = {}
     @all_coupons = {}
     for price_code in PromotionCode::PRICE_CODES
       todays_coupons = Offer.first(:select => "COUNT(id) as total", :conditions => ["(updated_at >= ? and updated_at <= ?) and response LIKE 'paid' and price =?", start_time, end_time, price_code])
       all_coupons = Offer.first(:select => "COUNT(id) as total", :conditions => ["response LIKE 'paid' and updated_at <= ? and price =?", DateTime.now.utc, price_code])
-      @todays_coupons[price_code] = todays_coupons.total
-      @all_coupons[price_code] = all_coupons.total
+      @todays_coupons[price_code] = [todays_coupons.total]
+      @all_coupons[price_code] = [all_coupons.total]
     end
 
     @analytics_overall = analytics_details('2011-05-10', @today.to_date)
     @analytics_today = analytics_details(@today.to_date, @today.to_date)
 
-    Notification.deliver_dailyreport(recipients,@todays_coupons,@all_coupons,@analytics_today,@analytics_overall,@today.to_date)
+    Notification.deliver_dailyreport(recipients,@todays_coupons,@all_coupons,@analytics_today,@analytics_overall,@todays_dollars,@overall_dollars,@today.to_date)
     flash[:notice] = "Report Sent"
     redirect_to root_path
   end
@@ -176,8 +176,8 @@ class HomeController < ApplicationController
 #    @today = DateTime.now.in_time_zone("Pacific Time (US & Canada)")
     @today = Date.today-1.day
 
-    @todays_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["(updated_at >= ? and updated_at <= ?) and response LIKE 'paid'", start_time, end_time]).total
-    @overall_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["response LIKE 'paid' and updated_at <= ?", DateTime.now.utc]).total
+    @todays_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["(updated_at >= ? and updated_at <= ?) and response LIKE 'paid'", start_time, end_time]).total.to_f
+    @overall_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["response LIKE 'paid' and updated_at <= ?", DateTime.now.utc]).total.to_f
 
     @todays_coupons = {}
     @all_coupons = {}
