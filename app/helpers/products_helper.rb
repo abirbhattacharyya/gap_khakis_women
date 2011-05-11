@@ -286,11 +286,10 @@ module ProductsHelper
           <ul class='list'>
             <li>Imported.</li>
             <li>Cap sleeves.</li>
+            <li>U-neck.</li>
           </ul>
           <h5 class='list'>fit & sizing</h5>
           <ul class='list'>
-            
-            <li>U-neck.</li>
             <li>Hits at the hips.</li>
           </ul>"
      end
