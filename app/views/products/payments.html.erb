@@ -1,4 +1,4 @@
-<h1>Congrats! You Won <%= @payment.offer.product.style_description %> for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %></h1>
+<h1>Congrats! You Won a <%= @payment.offer.product.style_description %> for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %></h1>
 <div class="columns">
     <div class="column widest">
         <div class="capsule2 inline w550px">

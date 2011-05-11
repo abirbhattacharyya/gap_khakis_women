@@ -1193,3 +1193,1361 @@ Rendered partials/_capsule (153.9ms)
   [4;35;1mProfile Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
 Completed in 216ms (View: 189, DB: 5) | 200 OK [http://localhost/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#winners (for 127.0.0.1 at 2011-05-11 11:34:32) [GET]
+  [4;36;1mPayment Load (0.6ms)[0m   [0;1mSELECT * FROM `payments` ORDER BY id desc LIMIT 100[0m
+Rendering template within layouts/application
+Rendering home/winners
+  [4;35;1mPayment Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mOffer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 117) [0m
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 15) [0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 113) [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;36;1mOffer Load (2.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 109) [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 101) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 15) [0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 99) [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 5) [0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 97) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 89) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 83) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 77) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 75) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 258ms (View: 229, DB: 15) | 200 OK [http://localhost/winners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 172.18.100.92 at 2011-05-11 11:44:31) [GET]
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (25.9ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 184ms (View: 164, DB: 5) | 200 OK [http://172.18.100.96/sayprice]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:33) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1"}
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.7ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-11 06:14:33', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:33', '172.18.100.92', 1)[0m
+  [4;36;1mSQL (5.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.5ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(59.0, 'counter', '2011-05-11 06:14:33', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:33', '172.18.100.92', 1)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (20.1ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 148ms (View: 73, DB: 16) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:35) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:35', `response` = 'rejected' WHERE `id` = 119[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.2ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and id < 119 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:35', `response` = 'expired' WHERE `id` = 118[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (15.5ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 87ms (View: 34, DB: 11) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.97 at 2011-05-11 11:44:36) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 134ms (View: 128, DB: 2) | 200 OK [http://172.18.100.96/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:37) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (1.7ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.8ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-11 06:14:37', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:37', '172.18.100.92', 1)[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(59.0, 'counter', '2011-05-11 06:14:37', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:37', '172.18.100.92', 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (1.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (18.9ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 108ms (View: 42, DB: 14) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 172.18.100.97 at 2011-05-11 11:44:39) [GET]
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (28.8ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 79ms (View: 58, DB: 6) | 200 OK [http://172.18.100.96/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:39) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:39', `response` = 'rejected' WHERE `id` = 121[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.3ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and id < 121 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:39', `response` = 'expired' WHERE `id` = 120[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (39.8ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 176ms (View: 83, DB: 11) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:40) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.6ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-11 06:14:40', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:40', '172.18.100.92', 1)[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.3ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(56.0, 'counter', '2011-05-11 06:14:40', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:40', '172.18.100.92', 1)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (13.7ms)
+  [4;35;1mProfile Load (0.3ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 82ms (View: 34, DB: 11) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:44:42) [POST]
+  Parameters: {"price"=>"10", "commit"=>"Go!", "authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.4ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(10.0, NULL, '2011-05-11 06:14:42', 1, 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=', '2011-05-11 06:14:42', '172.18.100.97', 1)[0m
+  [4;35;1mSQL (7.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(59.0, 'last', '2011-05-11 06:14:42', 1, 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=', '2011-05-11 06:14:42', '172.18.100.97', 1)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (23.6ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 246ms (View: 55, DB: 17) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:42) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"no"}
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:42', `response` = 'rejected' WHERE `id` = 123[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Load (1.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and id < 123 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:42', `response` = 'expired' WHERE `id` = 122[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (51.7ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 163ms (View: 104, DB: 11) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:44:43) [POST]
+  Parameters: {"authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.7ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:44', `response` = 'rejected' WHERE `id` = 125[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and id < 125 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.3ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:44', `response` = 'expired' WHERE `id` = 124[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (15.1ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 74ms (View: 32, DB: 12) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:44) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-11 06:14:44', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:44', '172.18.100.92', 1)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.3ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(51.0, 'counter', '2011-05-11 06:14:44', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:44', '172.18.100.92', 1)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (14.9ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 81ms (View: 34, DB: 7) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:45) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:45', `response` = 'rejected' WHERE `id` = 127[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.4ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and id < 127 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (5.6ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:45', `response` = 'expired' WHERE `id` = 126[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (24.4ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 118ms (View: 52, DB: 23) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:44:46) [POST]
+  Parameters: {"price"=>"30", "commit"=>"Go!", "authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (1.7ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(30.0, NULL, '2011-05-11 06:14:46', 1, 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=', '2011-05-11 06:14:46', '172.18.100.97', 1)[0m
+  [4;36;1mSQL (320.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.3ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(31.0, 'counter', '2011-05-11 06:14:47', 1, 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=', '2011-05-11 06:14:47', '172.18.100.97', 1)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (2.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (29.9ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 601ms (View: 73, DB: 335) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:47) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (28.0ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-11 06:14:47', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:47', '172.18.100.92', 1)[0m
+  [4;35;1mSQL (18.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.5ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(55.0, 'counter', '2011-05-11 06:14:47', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:47', '172.18.100.92', 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (49.9ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 219ms (View: 104, DB: 53) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:48) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"no"}
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (7.4ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.6ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:48', `response` = 'rejected' WHERE `id` = 131[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Load (1.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and id < 131 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:48', `response` = 'expired' WHERE `id` = 130[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (16.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (74.7ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (8.5ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 259ms (View: 101, DB: 43) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:44:49) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.3ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:49', `response` = 'rejected' WHERE `id` = 129[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and id < 129 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.3ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:49', `response` = 'expired' WHERE `id` = 128[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (16.6ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 75ms (View: 36, DB: 10) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-05-11 11:44:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 27ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:44:52) [POST]
+  Parameters: {"price"=>"40", "commit"=>"Go!", "authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (1.6ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.3ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(40.0, NULL, '2011-05-11 06:14:52', 1, 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=', '2011-05-11 06:14:52', '172.18.100.97', 1)[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, 'counter', '2011-05-11 06:14:52', 1, 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=', '2011-05-11 06:14:52', '172.18.100.97', 1)[0m
+  [4;36;1mSQL (19.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (22.6ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 214ms (View: 141, DB: 35) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-11 11:44:52) [GET]
+  [4;35;1mProduct Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (1.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (33.3ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 95ms (View: 67, DB: 5) | 200 OK [http://localhost/sayprice]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:44:55) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1"}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.4ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-11 06:14:55', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:14:55', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (7.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.4ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(59.0, 'counter', '2011-05-11 06:14:55', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:14:55', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (17.6ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 103ms (View: 41, DB: 16) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:58) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.5ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-11 06:14:58', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:58', '172.18.100.92', 1)[0m
+  [4;35;1mSQL (76.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.4ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(54.0, 'counter', '2011-05-11 06:14:58', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:14:58', '172.18.100.92', 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (27.2ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 304ms (View: 60, DB: 87) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:44:58) [POST]
+  Parameters: {"price"=>"54", "commit"=>"Counter", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.8ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:58', `price` = 54.0, `counter` = 2 WHERE `id` = 134[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.8ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:58', `response` = 'last', `price` = 54.0 WHERE `id` = 135[0m
+  [4;36;1mSQL (11.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (16.1ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 120ms (View: 44, DB: 21) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:44:59) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.6ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:59', `response` = 'rejected' WHERE `id` = 137[0m
+  [4;36;1mSQL (10.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and id < 137 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:14:59', `response` = 'expired' WHERE `id` = 136[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (17.2ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 97ms (View: 37, DB: 20) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:45:00) [POST]
+  Parameters: {"authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"no"}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (23.7ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:00', `response` = 'rejected' WHERE `id` = 135[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 135 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (1.3ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:01', `response` = 'expired' WHERE `id` = 134[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (26.8ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 143ms (View: 55, DB: 41) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:45:01) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.7ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-11 06:15:01', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:15:01', '172.18.100.92', 1)[0m
+  [4;35;1mSQL (18.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.5ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(57.0, 'counter', '2011-05-11 06:15:01', 1, '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=', '2011-05-11 06:15:01', '172.18.100.92', 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (1.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (42.5ms)
+  [4;36;1mProfile Load (19.6ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 263ms (View: 73, DB: 48) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:45:01) [POST]
+  Parameters: {"price"=>"49", "commit"=>"Counter", "authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:01', `price` = 49.0, `counter` = 2 WHERE `id` = 132[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:01', `response` = 'last' WHERE `id` = 133[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (146.4ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 225ms (View: 169, DB: 10) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.92 at 2011-05-11 11:45:03) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (13.3ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:03', `response` = 'rejected' WHERE `id` = 139[0m
+  [4;36;1mSQL (19.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.1ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and id < 139 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:03', `response` = 'expired' WHERE `id` = 138[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = '3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='3WQ0ZiTOOhsaM3L6fgcSQB4ChZLFJc87XaEVIJOUntY=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (23.9ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 144ms (View: 54, DB: 41) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:45:03) [POST]
+  Parameters: {"price"=>"54", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (1.1ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(54.0, NULL, '2011-05-11 06:15:03', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:15:03', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.3ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(55.0, 'counter', '2011-05-11 06:15:03', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:15:03', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (15.9ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 91ms (View: 40, DB: 9) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:45:05) [POST]
+  Parameters: {"authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.9ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:05', `response` = 'rejected' WHERE `id` = 133[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and id < 133 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:06', `response` = 'expired' WHERE `id` = 132[0m
+  [4;36;1mSQL (24.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (20.3ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 111ms (View: 43, DB: 33) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:45:06) [POST]
+  Parameters: {"price"=>"55", "commit"=>"Counter", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.5ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:06', `response` = 'accepted' WHERE `id` = 141[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (51.4ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 175ms (View: 100, DB: 9) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:45:09) [POST]
+  Parameters: {"price"=>"40", "commit"=>"Go!", "authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (1.1ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(40.0, NULL, '2011-05-11 06:15:09', 1, 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=', '2011-05-11 06:15:09', '172.18.100.97', 1)[0m
+  [4;35;1mSQL (4.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(57.0, 'counter', '2011-05-11 06:15:09', 1, 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=', '2011-05-11 06:15:09', '172.18.100.97', 1)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (126.6ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 215ms (View: 153, DB: 14) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-11 11:45:13) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Counter", "authenticity_token"=>"Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.5ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:13', `price` = 50.0, `counter` = 2 WHERE `id` = 142[0m
+  [4;35;1mSQL (6.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:13', `price` = 51.0, `counter` = 2 WHERE `id` = 143[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Y4KSBf/dKOvG8+TVDhYyzC/v3S2NtynrMn6UnL+NUdE=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (20.2ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 118ms (View: 46, DB: 17) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-11 11:45:17) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"141"}
+  [4;36;1mOffer Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 141) LIMIT 1[0m
+  [4;36;1mPayment Load (0.6ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.offer_id = 141) LIMIT 1[0m
+  [4;35;1mPromotionCode Load (1161.5ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (price_point = 55.0 and used = 0) LIMIT 1[0m
+  [4;36;1mPromotionCode Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPayment Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Create (0.5ms)[0m   [0mINSERT INTO `payments` (`created_at`, `updated_at`, `expiry`, `offer_id`, `promotion_code_id`, `email`) VALUES('2011-05-11 06:15:18', '2011-05-11 06:15:18', NULL, 141, 765372, NULL)[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Update (0.3ms)[0m   [0;1mUPDATE `payments` SET `updated_at` = '2011-05-11 06:15:18', `expiry` = '2011-05-25 06:15:18' WHERE `id` = 13[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPromotionCode Update (0.6ms)[0m   [0mUPDATE `promotion_codes` SET `updated_at` = '2011-05-11 06:15:18', `used` = 1 WHERE `id` = 765372[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:18', `response` = 'paid' WHERE `id` = 141[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;36;1mOffer Load (0.3ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 141) [0m
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Load (0.4ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 765372) [0m
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 1379ms (View: 147, DB: 1179) | 200 OK [http://localhost/payment/141]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-11 11:45:19) [GET]
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (28.8ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 79ms (View: 60, DB: 5) | 200 OK [http://localhost/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:45:24) [POST]
+  Parameters: {"price"=>"54", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.4ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(54.0, NULL, '2011-05-11 06:15:24', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:15:24', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.4ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(57.0, 'counter', '2011-05-11 06:15:24', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:15:24', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (18.8ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 118ms (View: 43, DB: 15) | 200 OK [http://localhost/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:45:27) [POST]
+  Parameters: {"price"=>"55", "commit"=>"Counter", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.3ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:27', `price` = 55.0, `counter` = 2 WHERE `id` = 144[0m
+  [4;35;1mSQL (9.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:27', `response` = 'last' WHERE `id` = 145[0m
+  [4;36;1mSQL (18.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (17.4ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 145ms (View: 42, DB: 36) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:45:30) [POST]
+  Parameters: {"authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:30', `response` = 'rejected' WHERE `id` = 145[0m
+  [4;36;1mSQL (14.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 145 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:30', `response` = 'expired' WHERE `id` = 140[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:30', `response` = 'expired' WHERE `id` = 144[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (17.6ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 102ms (View: 40, DB: 23) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:45:32) [POST]
+  Parameters: {"price"=>"55", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.3ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(55.0, NULL, '2011-05-11 06:15:32', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:15:32', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(56.0, 'counter', '2011-05-11 06:15:32', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:15:32', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (15.3ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 89ms (View: 35, DB: 12) | 200 OK [http://localhost/1]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:45:37) [POST]
+  Parameters: {"price"=>"56", "commit"=>"Counter", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (2.8ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.3ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:37', `response` = 'accepted' WHERE `id` = 147[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (16.0ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 82ms (View: 37, DB: 14) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-11 11:45:51) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"147"}
+  [4;36;1mOffer Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 147) LIMIT 1[0m
+  [4;36;1mPayment Load (0.6ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.offer_id = 147) LIMIT 1[0m
+  [4;35;1mPromotionCode Load (102.3ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (price_point = 56.0 and used = 0) LIMIT 1[0m
+  [4;36;1mPromotionCode Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPayment Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Create (0.4ms)[0m   [0mINSERT INTO `payments` (`created_at`, `updated_at`, `expiry`, `offer_id`, `promotion_code_id`, `email`) VALUES('2011-05-11 06:15:51', '2011-05-11 06:15:51', NULL, 147, 65368, NULL)[0m
+  [4;36;1mSQL (5.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Update (0.3ms)[0m   [0;1mUPDATE `payments` SET `updated_at` = '2011-05-11 06:15:51', `expiry` = '2011-05-25 06:15:51' WHERE `id` = 14[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPromotionCode Update (0.3ms)[0m   [0mUPDATE `promotion_codes` SET `updated_at` = '2011-05-11 06:15:51', `used` = 1 WHERE `id` = 65368[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.3ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:15:51', `response` = 'paid' WHERE `id` = 147[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 147) [0m
+  [4;35;1mProduct Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Load (0.5ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 65368) [0m
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 226ms (View: 47, DB: 120) | 200 OK [http://localhost/payment/147]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-11 11:45:51) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"147"}
+  [4;35;1mOffer Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 147) LIMIT 1[0m
+  [4;35;1mPayment Load (0.4ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.offer_id = 147) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;36;1mPayment Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 147) [0m
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mPromotionCode Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPromotionCode Load (0.1ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 65368) [0m
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 209ms (View: 184, DB: 7) | 200 OK [http://localhost/payment/147]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-11 11:45:53) [GET]
+  [4;35;1mProduct Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (33.3ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 95ms (View: 70, DB: 5) | 200 OK [http://localhost/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:46:01) [POST]
+  Parameters: {"price"=>"57", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.4ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(57.0, NULL, '2011-05-11 06:16:01', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:16:01', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(59.0, 'counter', '2011-05-11 06:16:01', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:16:01', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (16.7ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 105ms (View: 40, DB: 15) | 200 OK [http://localhost/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:46:04) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"no"}
+  [4;35;1mProduct Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (1.1ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:16:04', `response` = 'rejected' WHERE `id` = 149[0m
+  [4;35;1mSQL (6.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Load (1.7ms)[0m   [0;1mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 149 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-11 06:16:04', `response` = 'expired' WHERE `id` = 146[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.3ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:16:04', `response` = 'expired' WHERE `id` = 148[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (23.9ms)
+  [4;36;1mProfile Load (2.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 237ms (View: 48, DB: 20) | 200 OK [http://localhost/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:46:06) [POST]
+  Parameters: {"price"=>"57", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(57.0, NULL, '2011-05-11 06:16:06', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:16:06', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (22.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.3ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(59.0, 'counter', '2011-05-11 06:16:06', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:16:06', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (16.7ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 109ms (View: 37, DB: 30) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:46:08) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:16:08', `response` = 'rejected' WHERE `id` = 151[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 151 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:16:08', `response` = 'expired' WHERE `id` = 150[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (17.9ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 85ms (View: 39, DB: 13) | 200 OK [http://localhost/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:46:10) [POST]
+  Parameters: {"price"=>"58", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;35;1mProduct Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.3ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(58.0, NULL, '2011-05-11 06:16:10', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:16:10', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.5ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(59.0, 'counter', '2011-05-11 06:16:10', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-11 06:16:10', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (18.4ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 111ms (View: 44, DB: 14) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 11:46:12) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"no"}
+  [4;36;1mProduct Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:16:12', `response` = 'rejected' WHERE `id` = 153[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (1.7ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 153 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.4ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-11 06:16:12', `response` = 'expired' WHERE `id` = 152[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.3ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (32.2ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 137ms (View: 72, DB: 20) | 200 OK [http://localhost/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-11 12:02:40) [GET]
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (21.6ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (47.7ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 447ms (View: 380, DB: 27) | 200 OK [http://localhost/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 12:02:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (20.3ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 85ms (View: 47, DB: 6) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-11 12:02:44) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '15') LIMIT 1[0m
+  [4;36;1mOffer Load (1.3ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 15 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (16.9ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 66ms (View: 39, DB: 6) | 200 OK [http://localhost/15]
