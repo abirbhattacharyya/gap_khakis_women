@@ -21,7 +21,7 @@
                           <%= content_tag(:span, button_to_function("Let's deal", "window.location.href='#{capsule_path(payment.offer.product.id)}'"), :class => "button-green") %>
                           <span class="share-line">
                               <%= link_to(image_tag("/images/icons/facebook-20x20px.gif", :size => "20x20", :alt => "Facebook", :title => "Facebook"), "http://www.facebook.com/sharer.php?u=#{root_url}&t=Say your price", :target => "_new") %>
-                              <%= link_to(image_tag("/images/icons/twitter-20x20px.gif", :size => "20x20", :alt => "Twitter", :title => "Twitter"), "http://twitter.com/home?status=Let’s make a deal on women’s clothes. Say Your Price http://gapmyprice.com/", :target => "_new") %>
+                              <%= link_to(image_tag("/images/icons/twitter-20x20px.gif", :size => "20x20", :alt => "Twitter", :title => "Twitter"), "http://twitter.com/home?status=Want great deals on our latest women’s styles? Say Your Price! http://gapmyprice.com", :target => "_new") %>
                               <%#= link_to(image_tag("/images/icons/email-20x20px.gif", :size => "20x20", :alt => "Email", :title => "Email"), send_to_path(payment.offer.product.id)) %>
                           </span>
                           <span class="divider"></span>
