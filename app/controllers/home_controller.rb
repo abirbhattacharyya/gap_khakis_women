@@ -151,13 +151,13 @@ class HomeController < ApplicationController
     @today = Date.today-1.day
 
     @todays_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["(CONVERT_TZ(updated_at, '+0:00', '-7:00') >= ? and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ?) and response LIKE 'paid'", start_time, end_time]).total.to_f
-    @overall_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ?", DateTime.now.utc]).total.to_f
+    @overall_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ?", DateTime.now]).total.to_f
 
     @todays_coupons = {}
     @all_coupons = {}
     for price_code in PromotionCode::PRICE_CODES
       todays_coupons = Offer.first(:select => "COUNT(id) as total", :conditions => ["(CONVERT_TZ(updated_at, '+0:00', '-7:00') >= ? and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ?) and response LIKE 'paid' and price =?", start_time, end_time, price_code])
-      all_coupons = Offer.first(:select => "COUNT(id) as total", :conditions => ["response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ? and price =?", DateTime.now.utc, price_code])
+      all_coupons = Offer.first(:select => "COUNT(id) as total", :conditions => ["response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ? and price =?", DateTime.now, price_code])
       @todays_coupons[price_code] = [todays_coupons.total]
       @all_coupons[price_code] = [all_coupons.total]
     end
@@ -177,13 +177,13 @@ class HomeController < ApplicationController
     @today = Date.today-1.day
 
     @todays_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["(CONVERT_TZ(updated_at, '+0:00', '-7:00') >= ? and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ?) and response LIKE 'paid'", start_time, end_time]).total.to_f
-    @overall_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ?", DateTime.now.utc]).total.to_f
+    @overall_dollars = Offer.first(:select => "SUM(price) as total", :conditions => ["response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ?", DateTime.now]).total.to_f
 
     @todays_coupons = {}
     @all_coupons = {}
     for price_code in PromotionCode::PRICE_CODES
       todays_coupons = Offer.first(:select => "COUNT(id) as total", :conditions => ["(CONVERT_TZ(updated_at, '+0:00', '-7:00') >= ? and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ?) and response LIKE 'paid' and price =?", start_time, end_time, price_code])
-      all_coupons = Offer.first(:select => "COUNT(id) as total", :conditions => ["response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ? and price =?", DateTime.now.utc, price_code])
+      all_coupons = Offer.first(:select => "COUNT(id) as total", :conditions => ["response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= ? and price =?", DateTime.now, price_code])
       @todays_coupons[price_code] = [todays_coupons.total]
       @all_coupons[price_code] = [all_coupons.total]
     end
