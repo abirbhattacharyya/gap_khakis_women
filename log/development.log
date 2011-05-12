@@ -6007,3 +6007,1453 @@ Rendering home/daily_report
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired' and Date(offers.updated_at) = '2011-05-10') [0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired') [0m
 Completed in 4136ms (View: 25, DB: 38) | 200 OK [http://172.18.100.96/home/daily_report]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#send_daily_report (for 172.18.100.92 at 2011-05-11 13:02:49) [GET]
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT SUM(price) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid') LIMIT 1[0m
+  [4;35;1mOffer Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT SUM(price) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =11) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =11) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =12) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =12) LIMIT 1[0m
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =13) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =13) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =15) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =15) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =16) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =16) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =18) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =18) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =19) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =19) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =20) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =20) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =21) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =21) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =22) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =22) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =23) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =23) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =24) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =24) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =25) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =25) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =27) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =27) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =28) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =28) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =29) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =29) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =30) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =30) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =31) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =31) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =32) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =32) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =33) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =33) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =34) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =34) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =35) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =35) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =36) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =36) LIMIT 1[0m
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =39) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =39) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =40) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =40) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =41) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =41) LIMIT 1[0m
+  [4;35;1mOffer Load (0.3ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =45) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =45) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =48) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =48) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =49) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =49) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =50) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =50) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =51) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =51) LIMIT 1[0m
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =54) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =54) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =55) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =55) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =56) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =56) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =57) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =57) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =59) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =59) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =64) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =64) LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE ((updated_at >= '2011-05-10 00:00:00' and updated_at <= '2011-05-10 23:59:59') and response LIKE 'paid' and price =71) LIMIT 1[0m
+  [4;36;1mOffer Load (3.5ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and updated_at <= '2011-05-11 07:32:50' and price =71) LIMIT 1[0m
+  [4;35;1mSQL (7.2ms)[0m   [0mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired' and Date(offers.updated_at) = '2011-05-10') [0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired') [0m
+Sent mail to 
+
+Date: Wed, 11 May 2011 13:02:54 +0530
+From: Gapmyprice <myprice@gapmyprice.com>
+Reply-To: custserv@gap.com
+Bcc: mailtoankitparekh@gmail.com,
+	 dhaval.parikh33@gmail.com
+Subject: daily status report
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+
+<h1>Daily dealkat say your price report</h1>
+<h2>
+  Campaign Start Date= May 11, 2011<br />
+  Time made= May 11, 2011, 12AM PST
+</h2>
+<h3>Salient Metrics</h3>
+
+<table style="border:medium none;border-collapse:collapse;width:624px">
+  <colgroup><col width="*"><col width="*"><col width="*"></colgroup>
+  <tbody>
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:bold;font-style:normal;text-decoration:underline;vertical-align:baseline">Metric</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:bold;font-style:normal;text-decoration:underline;vertical-align:baseline">Yesterday</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:bold;font-style:normal;text-decoration:underline;vertical-align:baseline">Cumulative Since May 11</span></td>
+    </tr>
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of visits</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">45</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">45</span></td>
+    </tr>
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of pageviews</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1,926</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1,926</span></td>
+    </tr>
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">Average pages/visit</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">42.80</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">42.80</span></td>
+    </tr>
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">Average time on site</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"><b>18:03</b></span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"><b>18:03</b></span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Coupon Details</h3>
+
+<table style="border:medium none;border-collapse:collapse;width:624px">
+  <colgroup><col width="*"><col width="*"><col width="*"></colgroup>
+  <tbody>
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:bold;font-style:normal;text-decoration:underline;vertical-align:baseline">Metric</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:bold;font-style:normal;text-decoration:underline;vertical-align:baseline">Yesterday</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:bold;font-style:normal;text-decoration:underline;vertical-align:baseline">Cumulative Since May 11</span></td>
+    </tr>
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># Of coupons viewed</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">38</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">68</span></td>
+    </tr>
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">Total coupon sales @100% redemption</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">$327.00</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">$640.00</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $11 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $12 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $13 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $15 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $16 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $18 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $19 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">2</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $20 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $21 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $22 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $23 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $24 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $25 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $27 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $28 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $29 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $30 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">2</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $31 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $32 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">2</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">2</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $33 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">2</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $34 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $35 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $36 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $39 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $40 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $41 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $45 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $48 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $49 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $50 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $51 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $54 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $55 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $56 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $57 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $59 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $64 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">0</span></td>
+    </tr>
+    
+    <tr style="min-height:0px">
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline"># of $71 Coupons</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">1</span></td>
+      <td style="border:1px dotted rgb(170, 170, 170);vertical-align:top;padding:7px"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:normal;font-style:normal;text-decoration:none;vertical-align:baseline">2</span></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<p>
+<a href="mailto:dealkat@dealkat.com" target="_blank"><span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 153);background-color:transparent;font-weight:bold;font-style:normal;text-decoration:underline;vertical-align:baseline">dealkat@dealkat.com</span></a>
+<!--span style="font-size:12pt;font-family:Verdana;color:rgb(0, 0, 0);background-color:transparent;font-weight:bold;font-style:normal;text-decoration:underline;vertical-align:baseline"> &nbsp;650.210.3772</span-->
+</p>
+Redirected to http://172.18.100.96:3000/
+Completed in 11435ms (DB: 47) | 302 Found [http://172.18.100.96/home/send_daily_report]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.92 at 2011-05-11 13:03:01) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [4;35;1mProduct Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` WHERE (`products`.user_id = 1) [0m
+  [4;35;1mProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.user_id = 1) ORDER BY products.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering /home/notifications
+Rendered partials/_my_dashboard (1.9ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 183ms (View: 121, DB: 6) | 200 OK [http://172.18.100.96/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.97 at 2011-05-11 13:29:53) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [4;36;1mProduct Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `products` WHERE (`products`.user_id = 1) [0m
+  [4;36;1mProfile Columns (16.6ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.user_id = 1) ORDER BY products.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering /home/notifications
+Rendered partials/_my_dashboard (1.3ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 86ms (View: 14, DB: 21) | 200 OK [http://172.18.100.96/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.97 at 2011-05-11 16:35:11) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (13.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 334ms (View: 258, DB: 14) | 200 OK [http://172.18.100.96/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 172.18.100.97 at 2011-05-11 16:35:16) [GET]
+  [4;35;1mProduct Columns (15.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (66.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'hh3EqpekdPL3ioH4IFNjGb1eM5/nrTkPg4BWFszvB74=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (29.3ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='hh3EqpekdPL3ioH4IFNjGb1eM5/nrTkPg4BWFszvB74=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (1299.8ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 1658ms (View: 1340, DB: 113) | 200 OK [http://172.18.100.96/sayprice]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#analytics (for 172.18.100.92 at 2011-05-11 16:41:33) [GET]
+  [4;35;1mUser Columns (40.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mOffer Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired') [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired' and Date(offers.updated_at) = '2011-05-10') [0m
+Rendering template within layouts/application
+Rendering home/analytics
+Rendered partials/_my_dashboard (2.4ms)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from visualization at /var/www/myapp/_www/ON_EngineYard/gap_khakis_women/vendor/plugins/gvis/lib/google_visualization.rb:61)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 243ms (View: 140, DB: 45) | 200 OK [http://172.18.100.96/analytics]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.92 at 2011-05-11 16:41:37) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` WHERE (`products`.user_id = 1) [0m
+  [4;35;1mProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.user_id = 1) ORDER BY products.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering /home/notifications
+Rendered partials/_my_dashboard (2.4ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 127ms (View: 56, DB: 5) | 200 OK [http://172.18.100.96/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.97 at 2011-05-11 16:48:23) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 165ms (View: 41, DB: 1) | 200 OK [http://172.18.100.96/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#notifications (for 172.18.100.92 at 2011-05-11 16:58:39) [GET]
+  [4;36;1mUser Columns (35.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [4;35;1mProfile Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.user_id = 1) ORDER BY products.id DESC LIMIT 1[0m
+  [4;35;1mProduct Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/application
+Rendering home/notifications
+Rendered partials/_my_dashboard (2.2ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 150ms (View: 35, DB: 39) | 200 OK [http://172.18.100.96/notifications]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 172.18.100.92 at 2011-05-11 17:53:45) [GET]
+Redirected to http://172.18.100.96:3000/
+Completed in 28ms (DB: 0) | 302 Found [http://172.18.100.96/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.92 at 2011-05-11 17:53:45) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 141ms (View: 133, DB: 2) | 200 OK [http://172.18.100.96/]
+  [4;35;1mSQL (22.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.97 at 2011-05-12 10:55:55) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProfile Load (14.4ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (179.7ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 311ms (View: 86, DB: 216) | 200 OK [http://172.18.100.96/]
+  [4;36;1mSQL (21.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 172.18.100.97 at 2011-05-12 10:55:58) [GET]
+  [4;35;1mProduct Columns (75.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (114.9ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.3ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (275.8ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (16.6ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 490ms (View: 231, DB: 231) | 200 OK [http://172.18.100.96/sayprice]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-12 10:56:05) [POST]
+  Parameters: {"price"=>"20", "commit"=>"Go!", "authenticity_token"=>"Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=", "id"=>"1"}
+  [4;35;1mProduct Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (10.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (36.6ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (6.5ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (127.9ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(20.0, NULL, '2011-05-12 05:26:05', 1, 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=', '2011-05-12 05:26:05', '172.18.100.97', 1)[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (2.2ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(31.0, 'counter', '2011-05-12 05:26:05', 1, 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=', '2011-05-12 05:26:05', '172.18.100.97', 1)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (146.7ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 428ms (View: 171, DB: 196) | 200 OK [http://172.18.100.96/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 172.18.100.97 at 2011-05-12 10:56:07) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=", "id"=>"1", "submit_button"=>"yes"}
+  [4;36;1mProduct Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (108.5ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (13.6ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-12 05:26:08', `response` = 'accepted' WHERE `id` = 159[0m
+  [4;36;1mSQL (8.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Load (12.6ms)[0m   [0mSELECT * FROM `offers` WHERE (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=' and id < 159 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.9ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-12 05:26:08', `response` = 'expired' WHERE `id` = 158[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (26.9ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 266ms (View: 55, DB: 162) | 200 OK [http://172.18.100.96/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 172.18.100.97 at 2011-05-12 10:56:09) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=", "id"=>"159"}
+  [4;35;1mOffer Columns (15.8ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 159) LIMIT 1[0m
+  [4;35;1mPayment Load (6.5ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.offer_id = 159) LIMIT 1[0m
+  [4;36;1mPromotionCode Load (1552.5ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (price_point = 31.0 and used = 0) LIMIT 1[0m
+  [4;35;1mPromotionCode Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;36;1mPayment Columns (40.0ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Create (1.8ms)[0m   [0;1mINSERT INTO `payments` (`created_at`, `updated_at`, `expiry`, `offer_id`, `promotion_code_id`, `email`) VALUES('2011-05-12 05:26:11', '2011-05-12 05:26:11', NULL, 159, 405369, NULL)[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Update (0.9ms)[0m   [0mUPDATE `payments` SET `updated_at` = '2011-05-12 05:26:11', `expiry` = '2011-05-19 05:26:11' WHERE `id` = 17[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPromotionCode Update (13.2ms)[0m   [0;1mUPDATE `promotion_codes` SET `updated_at` = '2011-05-12 05:26:11', `used` = 1 WHERE `id` = 405369[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.8ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-12 05:26:11', `response` = 'paid' WHERE `id` = 159[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 159) [0m
+  [4;36;1mProduct Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mPromotionCode Load (0.3ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 405369) [0m
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 1923ms (View: 212, DB: 1646) | 200 OK [http://172.18.100.96/payment/159]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-05-12 10:56:23) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (38.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 79ms (View: 33, DB: 38) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-12 10:56:26) [GET]
+  [4;35;1mProduct Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (28.5ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 90ms (View: 62, DB: 8) | 200 OK [http://localhost/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-12 10:56:31) [POST]
+  Parameters: {"price"=>"50", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"counter"}
+  [4;36;1mProduct Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 1 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (1.6ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(50.0, NULL, '2011-05-12 05:26:31', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-12 05:26:31', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (36.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (0.4ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(56.0, 'counter', '2011-05-12 05:26:31', 1, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-12 05:26:31', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (21.9ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 270ms (View: 55, DB: 46) | 200 OK [http://localhost/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-12 10:56:33) [POST]
+  Parameters: {"price"=>"", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"1", "submit_button"=>"yes"}
+  [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '1') LIMIT 1[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.3ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-12 05:26:33', `response` = 'accepted' WHERE `id` = 161[0m
+  [4;35;1mSQL (10.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Load (1.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 161 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-12 05:26:33', `response` = 'expired' WHERE `id` = 160[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (15.1ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 83ms (View: 33, DB: 19) | 200 OK [http://localhost/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-12 10:56:35) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"161"}
+  [4;36;1mOffer Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 161) LIMIT 1[0m
+  [4;36;1mPayment Load (0.5ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.offer_id = 161) LIMIT 1[0m
+  [4;35;1mPromotionCode Load (104.3ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (price_point = 56.0 and used = 0) LIMIT 1[0m
+  [4;36;1mPromotionCode Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPayment Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Create (0.3ms)[0m   [0mINSERT INTO `payments` (`created_at`, `updated_at`, `expiry`, `offer_id`, `promotion_code_id`, `email`) VALUES('2011-05-12 05:26:35', '2011-05-12 05:26:35', NULL, 161, 65369, NULL)[0m
+  [4;36;1mSQL (8.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Update (0.3ms)[0m   [0;1mUPDATE `payments` SET `updated_at` = '2011-05-12 05:26:35', `expiry` = '2011-03-31' WHERE `id` = 18[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPromotionCode Update (0.3ms)[0m   [0mUPDATE `promotion_codes` SET `updated_at` = '2011-05-12 05:26:35', `used` = 1 WHERE `id` = 65369[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.3ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-12 05:26:35', `response` = 'paid' WHERE `id` = 161[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;36;1mOffer Load (0.4ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 161) [0m
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Load (0.3ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 65369) [0m
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 371ms (View: 174, DB: 139) | 200 OK [http://localhost/payment/161]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.92 at 2011-05-12 10:56:46) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 39ms (View: 28, DB: 4) | 200 OK [http://172.18.100.96/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 172.18.100.97 at 2011-05-12 10:56:50) [POST]
+  Parameters: {"commit"=>"Email Coupon", "authenticity_token"=>"Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=", "id"=>"17", "payment"=>{"email"=>"dhaval.parikh33@gmail.com"}}
+  [4;36;1mPayment Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mPayment Load (2.1ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.`id` = 17) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Update (1.0ms)[0m   [0mUPDATE `payments` SET `updated_at` = '2011-05-12 05:26:50', `email` = 'dhaval.parikh33@gmail.com' WHERE `id` = 17[0m
+  [4;36;1mSQL (143.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (12.3ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 159) [0m
+  [4;35;1mProduct Columns (15.1ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;36;1mPromotionCode Load (0.8ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 405369) [0m
+Sent mail to 
+
+Date: Thu, 12 May 2011 10:56:50 +0530
+From: Gapmyprice <myprice@gapmyprice.com>
+Reply-To: custserv@gap.com
+Bcc: dhaval.parikh33@gmail.com
+Subject: Your Say Your Price Coupon
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+<h1>Congrats! You Won a Longsleeve Sheer Popover Shirt for $31</h1>
+<div class="columns">
+    <div class="column widest">
+        <div class="capsule2 inline w550px">
+          <div class="cinner">
+              <h2>Coupon# VB6K27Y4YW87</h2>
+              <div class="divider"></div>
+              <p>
+                  Your Price: $31<br/>
+                  You Saved: $28.95<br/>
+                  <span class="expires">Expires : 5/29/11</span>
+              </p>
+              <p>
+                  Longsleeve Sheer Popover Shirt<br/>
+                  Style#: 834570
+              </p>
+              <p class="terms">
+                  <b>Terms and Conditions:</b>
+                  Offer valid in the U.S. only (including Puerto Rico) at Gap stores. Not valid at Gap Outlet, Gap Factory Store or The Gap Generation stores or online. Offer is good for one time use only and must be surrendered at time of in-store purchase. Discount applies to select women’s merchandise only, not to GiftCards or applicable taxes. No adjustments on previous purchases. Not valid for cash or cash equivalent. Offer cannot be combined with any other offers or discounts, including the Gap Inc. employee discount. Not responsible for lost or stolen coupons. Offer is not transferable. Cashiers: enter the code above to process the discount.
+              </p>
+            </div><!-- .cinner -->
+            <div class="ctl"></div><div class="ctc"></div><div class="ctr"></div>
+            <div class="cml"></div><div class="cmr"></div>
+            <div class="cbl"></div><div class="cbc"></div><div class="cbr"></div>
+        </div><!-- .capsule -->
+    </div><!-- .column.wide -->
+</div><!-- .columns -->
+
+<p>
+  Thank you from <a href="http://www.gapmyprice.com">Gapmyprice.com</a>
+</p>
+Redirected to http://172.18.100.96:3000/sayprice
+Completed in 8998ms (DB: 179) | 302 Found [http://172.18.100.96/payment/17]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 172.18.100.97 at 2011-05-12 10:56:59) [GET]
+  [4;36;1mProduct Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `products` [0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.3ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (23.8ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (204.1ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 260ms (View: 214, DB: 30) | 200 OK [http://172.18.100.96/sayprice]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-12 10:57:51) [POST]
+  Parameters: {"commit"=>"Email Coupon", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"18", "payment"=>{"email"=>"brijeshshah86@gmail.com"}}
+  [4;35;1mPayment Columns (16.9ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mPayment Load (5.4ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.`id` = 18) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Update (10.1ms)[0m   [0;1mUPDATE `payments` SET `updated_at` = '2011-05-12 05:27:51', `email` = 'brijeshshah86@gmail.com' WHERE `id` = 18[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (3.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 161) [0m
+  [4;36;1mProduct Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mPromotionCode Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPromotionCode Load (0.2ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 65369) [0m
+Sent mail to 
+
+Date: Thu, 12 May 2011 10:57:51 +0530
+From: Gapmyprice <myprice@gapmyprice.com>
+Reply-To: custserv@gap.com
+Bcc: brijeshshah86@gmail.com
+Subject: Your Say Your Price Coupon
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+<h1>Congrats! You Won a Longsleeve Sheer Popover Shirt for $56</h1>
+<div class="columns">
+    <div class="column widest">
+        <div class="capsule2 inline w550px">
+          <div class="cinner">
+              <h2>Coupon# LD8T74Y71HVC</h2>
+              <div class="divider"></div>
+              <p>
+                  Your Price: $56<br/>
+                  You Saved: $3.95<br/>
+                  <span class="expires">Expires : 5/29/11</span>
+              </p>
+              <p>
+                  Longsleeve Sheer Popover Shirt<br/>
+                  Style#: 834570
+              </p>
+              <p class="terms">
+                  <b>Terms and Conditions:</b>
+                  Offer valid in the U.S. only (including Puerto Rico) at Gap stores. Not valid at Gap Outlet, Gap Factory Store or The Gap Generation stores or online. Offer is good for one time use only and must be surrendered at time of in-store purchase. Discount applies to select women’s merchandise only, not to GiftCards or applicable taxes. No adjustments on previous purchases. Not valid for cash or cash equivalent. Offer cannot be combined with any other offers or discounts, including the Gap Inc. employee discount. Not responsible for lost or stolen coupons. Offer is not transferable. <b>Cashiers:</b> enter the code above to process the discount.
+              </p>
+            </div><!-- .cinner -->
+            <div class="ctl"></div><div class="ctc"></div><div class="ctr"></div>
+            <div class="cml"></div><div class="cmr"></div>
+            <div class="cbl"></div><div class="cbc"></div><div class="cbr"></div>
+        </div><!-- .capsule -->
+    </div><!-- .column.wide -->
+</div><!-- .columns -->
+
+<p>
+  Thank you from <a href="http://www.gapmyprice.com">Gapmyprice.com</a>
+</p>
+Redirected to http://localhost:3000/sayprice
+Completed in 6925ms (DB: 47) | 302 Found [http://localhost/payment/18]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-12 10:57:58) [POST]
+  Parameters: {"commit"=>"Email Coupon", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"18", "payment"=>{"email"=>"brijeshshah86@gmail.com"}}
+  [4;35;1mPayment Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mPayment Load (0.5ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.`id` = 18) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 161) [0m
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;36;1mPromotionCode Load (0.2ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 65369) [0m
+Sent mail to 
+
+Date: Thu, 12 May 2011 10:57:58 +0530
+From: Gapmyprice <myprice@gapmyprice.com>
+Reply-To: custserv@gap.com
+Bcc: brijeshshah86@gmail.com
+Subject: Your Say Your Price Coupon
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+<h1>Congrats! You Won a Longsleeve Sheer Popover Shirt for $56</h1>
+<div class="columns">
+    <div class="column widest">
+        <div class="capsule2 inline w550px">
+          <div class="cinner">
+              <h2>Coupon# LD8T74Y71HVC</h2>
+              <div class="divider"></div>
+              <p>
+                  Your Price: $56<br/>
+                  You Saved: $3.95<br/>
+                  <span class="expires">Expires : 5/29/11</span>
+              </p>
+              <p>
+                  Longsleeve Sheer Popover Shirt<br/>
+                  Style#: 834570
+              </p>
+              <p class="terms">
+                  <b>Terms and Conditions:</b>
+                  Offer valid in the U.S. only (including Puerto Rico) at Gap stores. Not valid at Gap Outlet, Gap Factory Store or The Gap Generation stores or online. Offer is good for one time use only and must be surrendered at time of in-store purchase. Discount applies to select women’s merchandise only, not to GiftCards or applicable taxes. No adjustments on previous purchases. Not valid for cash or cash equivalent. Offer cannot be combined with any other offers or discounts, including the Gap Inc. employee discount. Not responsible for lost or stolen coupons. Offer is not transferable. <b>Cashiers:</b> enter the code above to process the discount.
+              </p>
+            </div><!-- .cinner -->
+            <div class="ctl"></div><div class="ctc"></div><div class="ctr"></div>
+            <div class="cml"></div><div class="cmr"></div>
+            <div class="cbl"></div><div class="cbc"></div><div class="cbr"></div>
+        </div><!-- .capsule -->
+    </div><!-- .column.wide -->
+</div><!-- .columns -->
+
+<p>
+  Thank you from <a href="http://www.gapmyprice.com">Gapmyprice.com</a>
+</p>
+Redirected to http://localhost:3000/sayprice
+Completed in 6346ms (DB: 9) | 302 Found [http://localhost/payment/18]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-12 10:58:04) [GET]
+  [4;36;1mProduct Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `products` [0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (47.6ms)
+  [4;36;1mProfile Load (1.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 148ms (View: 107, DB: 11) | 200 OK [http://localhost/sayprice]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-12 11:00:07) [POST]
+  Parameters: {"authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "page"=>"2"}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` LIMIT 1,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (35.3ms)
+  [4;36;1mProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 297ms (View: 271, DB: 7) | 200 OK [http://localhost/sayprice]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-12 11:00:12) [POST]
+  Parameters: {"price"=>"90", "commit"=>"Go!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"2"}
+  [4;35;1mProduct Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '2') LIMIT 1[0m
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT AVG(price) as avg_price FROM `offers` WHERE (`offers`.product_id = 2 AND (response = 'paid')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (19.5ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Create (4.2ms)[0m   [0mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(90.0, NULL, '2011-05-12 05:30:12', 2, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-12 05:30:12', '127.0.0.1', 1)[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Create (0.4ms)[0m   [0;1mINSERT INTO `offers` (`price`, `response`, `created_at`, `product_id`, `token`, `updated_at`, `ip`, `counter`) VALUES(71.0, 'last', '2011-05-12 05:30:12', 2, 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=', '2011-05-12 05:30:12', '127.0.0.1', 1)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Load (1.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id <= 162 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.4ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-12 05:30:12', `response` = 'expired' WHERE `id` = 162[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.3ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (35.9ms)
+  [4;35;1mProfile Load (1.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 257ms (View: 89, DB: 47) | 200 OK [http://localhost/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 172.18.100.97 at 2011-05-12 11:00:15) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=", "id"=>"159"}
+  [4;36;1mOffer Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 159) LIMIT 1[0m
+  [4;36;1mPayment Load (0.7ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.offer_id = 159) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;35;1mPayment Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 159) [0m
+  [4;35;1mProduct Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mPromotionCode Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;36;1mPromotionCode Load (1.8ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 405369) [0m
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 170ms (View: 109, DB: 13) | 200 OK [http://172.18.100.96/payment/159]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 172.18.100.97 at 2011-05-12 11:00:18) [POST]
+  Parameters: {"commit"=>"Email Coupon", "authenticity_token"=>"Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=", "id"=>"17", "payment"=>{"email"=>"dhaval.parikh33@gmail.com"}}
+  [4;36;1mPayment Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mPayment Load (0.3ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.`id` = 17) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 159) [0m
+  [4;36;1mProduct Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mPromotionCode Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPromotionCode Load (0.1ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 405369) [0m
+Sent mail to 
+
+Date: Thu, 12 May 2011 11:00:18 +0530
+From: Gapmyprice <myprice@gapmyprice.com>
+Reply-To: custserv@gap.com
+Bcc: dhaval.parikh33@gmail.com
+Subject: Your Say Your Price Coupon
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+<h1>Congrats! You Won a Longsleeve Sheer Popover Shirt for $31</h1>
+<div class="columns">
+    <div class="column widest">
+        <div class="capsule2 inline w550px">
+          <div class="cinner">
+              <h2>Coupon# VB6K27Y4YW87</h2>
+              <div class="divider"></div>
+              <p>
+                  Your Price: $31<br/>
+                  You Saved: $28.95<br/>
+                  <span class="expires">Expires : 5/29/11</span>
+              </p>
+              <p>
+                  Longsleeve Sheer Popover Shirt<br/>
+                  Style#: 834570
+              </p>
+              <p class="terms">
+                  <b>Terms and Conditions:</b>
+                  Offer valid in the U.S. only (including Puerto Rico) at Gap stores. Not valid at Gap Outlet, Gap Factory Store or The Gap Generation stores or online. Offer is good for one time use only and must be surrendered at time of in-store purchase. Discount applies to select women’s merchandise only, not to GiftCards or applicable taxes. No adjustments on previous purchases. Not valid for cash or cash equivalent. Offer cannot be combined with any other offers or discounts, including the Gap Inc. employee discount. Not responsible for lost or stolen coupons. Offer is not transferable. <b>Cashiers:</b> enter the code above to process the discount.
+              </p>
+            </div><!-- .cinner -->
+            <div class="ctl"></div><div class="ctc"></div><div class="ctr"></div>
+            <div class="cml"></div><div class="cmr"></div>
+            <div class="cbl"></div><div class="cbc"></div><div class="cbr"></div>
+        </div><!-- .capsule -->
+    </div><!-- .column.wide -->
+</div><!-- .columns -->
+
+<p>
+  Thank you from <a href="http://www.gapmyprice.com">Gapmyprice.com</a>
+</p>
+Redirected to http://172.18.100.96:3000/sayprice
+Completed in 7139ms (DB: 6) | 302 Found [http://172.18.100.96/payment/17]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#capsule (for 127.0.0.1 at 2011-05-12 11:00:25) [POST]
+  Parameters: {"authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"2", "submit_button"=>"yes"}
+  [4;35;1mProduct Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = '2') LIMIT 1[0m
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOffer Update (0.5ms)[0m   [0;1mUPDATE `offers` SET `updated_at` = '2011-05-12 05:30:25', `response` = 'accepted' WHERE `id` = 163[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and id < 163 and (response IS NULL OR response LIKE 'counter')) AND (`offers`.product_id = 2) [0m
+Rendering template within layouts/application
+Rendering products/capsule
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 2 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (22.3ms)
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 114ms (View: 52, DB: 13) | 200 OK [http://localhost/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 172.18.100.97 at 2011-05-12 11:00:26) [GET]
+  [4;35;1mProduct Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (19.8ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (179.2ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 285ms (View: 229, DB: 26) | 200 OK [http://172.18.100.96/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-12 11:00:27) [POST]
+  Parameters: {"commit"=>"Get Coupon!", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"163"}
+  [4;36;1mOffer Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 163) LIMIT 1[0m
+  [4;36;1mPayment Load (0.5ms)[0m   [0;1mSELECT * FROM `payments` WHERE (`payments`.offer_id = 163) LIMIT 1[0m
+  [4;35;1mPromotionCode Load (1392.0ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (price_point = 71.0 and used = 0) LIMIT 1[0m
+  [4;36;1mPromotionCode Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPayment Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `payments`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Create (1.0ms)[0m   [0mINSERT INTO `payments` (`created_at`, `updated_at`, `expiry`, `offer_id`, `promotion_code_id`, `email`) VALUES('2011-05-12 05:30:28', '2011-05-12 05:30:28', NULL, 163, 745369, NULL)[0m
+  [4;36;1mSQL (136.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mPayment Update (0.4ms)[0m   [0;1mUPDATE `payments` SET `updated_at` = '2011-05-12 05:30:28', `expiry` = '2011-05-19 05:30:28' WHERE `id` = 19[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOffer Update (0.6ms)[0m   [0mUPDATE `offers` SET `updated_at` = '2011-05-12 05:30:28', `response` = 'paid' WHERE `id` = 163[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering products/payments
+  [4;35;1mOffer Load (0.5ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 163) [0m
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.7ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;36;1mPromotionCode Load (0.9ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 745369) [0m
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 1683ms (View: 63, DB: 1548) | 200 OK [http://localhost/payment/163]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#payments (for 127.0.0.1 at 2011-05-12 11:00:33) [POST]
+  Parameters: {"commit"=>"Email Coupon", "authenticity_token"=>"TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=", "id"=>"19", "payment"=>{"email"=>"brijeshshah86@gmail.com"}}
+  [4;36;1mPayment Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mPayment Load (0.4ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.`id` = 19) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPayment Update (0.4ms)[0m   [0mUPDATE `payments` SET `updated_at` = '2011-05-12 05:30:33', `email` = 'brijeshshah86@gmail.com' WHERE `id` = 19[0m
+  [4;36;1mSQL (11.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOffer Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+  [4;36;1mOffer Load (0.1ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.`id` = 163) [0m
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+  [4;35;1mPromotionCode Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;36;1mPromotionCode Load (0.2ms)[0m   [0;1mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 745369) [0m
+Sent mail to 
+
+Date: Thu, 12 May 2011 11:00:33 +0530
+From: Gapmyprice <myprice@gapmyprice.com>
+Reply-To: custserv@gap.com
+Bcc: brijeshshah86@gmail.com
+Subject: Your Say Your Price Coupon
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+<h1>Congrats! You Won a Maxy Print Dress for $71</h1>
+<div class="columns">
+    <div class="column widest">
+        <div class="capsule2 inline w550px">
+          <div class="cinner">
+              <h2>Coupon# uprice</h2>
+              <div class="divider"></div>
+              <p>
+                  Your Price: $71<br/>
+                  You Saved: $27.95<br/>
+                  <span class="expires">Expires : 5/29/11</span>
+              </p>
+              <p>
+                  Maxy Print Dress<br/>
+                  Style#: 836613
+              </p>
+              <p class="terms">
+                  <b>Terms and Conditions:</b>
+                  Offer valid in the U.S. only (including Puerto Rico) at Gap stores. Not valid at Gap Outlet, Gap Factory Store or The Gap Generation stores or online. Offer is good for one time use only and must be surrendered at time of in-store purchase. Discount applies to select women’s merchandise only, not to GiftCards or applicable taxes. No adjustments on previous purchases. Not valid for cash or cash equivalent. Offer cannot be combined with any other offers or discounts, including the Gap Inc. employee discount. Not responsible for lost or stolen coupons. Offer is not transferable. <b>Cashiers:</b> enter the code above to process the discount.
+              </p>
+            </div><!-- .cinner -->
+            <div class="ctl"></div><div class="ctc"></div><div class="ctr"></div>
+            <div class="cml"></div><div class="cmr"></div>
+            <div class="cbl"></div><div class="cbc"></div><div class="cbr"></div>
+        </div><!-- .capsule -->
+    </div><!-- .column.wide -->
+</div><!-- .columns -->
+
+<p>
+  Thank you from <a href="http://www.gapmyprice.com">Gapmyprice.com</a>
+</p>
+Redirected to http://localhost:3000/sayprice
+Completed in 6675ms (DB: 19) | 302 Found [http://localhost/payment/19]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#download_pdf (for 172.18.100.97 at 2011-05-12 11:00:40) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mPayment Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `payments`[0m
+  [4;35;1mPayment Load (0.7ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.`id` = '17') LIMIT 1[0m
+  [4;36;1mOffer Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.`id` = 159) [0m
+  [4;36;1mProduct Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mPromotionCode Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `promotion_codes`[0m
+  [4;35;1mPromotionCode Load (0.1ms)[0m   [0mSELECT * FROM `promotion_codes` WHERE (`promotion_codes`.`id` = 405369) [0m
+Rendered partials/_pdf_letter (48.4ms)
+Sending data mypricecoupon.pdf
+Completed in 568ms (View: 1, DB: 0) | 200 OK [http://172.18.100.96/download_pdf/17]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-12 11:00:40) [GET]
+  [4;35;1mProduct Columns (5.9ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (0.5ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.7ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (34.6ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 95ms (View: 65, DB: 14) | 200 OK [http://localhost/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.97 at 2011-05-12 11:01:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://172.18.100.96/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-05-12 11:01:47) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 99ms (View: 88, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-12 11:01:48) [GET]
+  [4;36;1mProduct Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `products` [0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (47.4ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 138ms (View: 92, DB: 8) | 200 OK [http://localhost/sayprice]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-05-12 11:01:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 38ms (View: 29, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-12 11:01:51) [GET]
+  [4;36;1mProduct Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `products` [0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;35;1mOffer Load (0.1ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (44.3ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 121ms (View: 87, DB: 8) | 200 OK [http://localhost/sayprice]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-05-12 11:01:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 32ms (View: 23, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 127.0.0.1 at 2011-05-12 11:01:53) [GET]
+  [4;36;1mProduct Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `products` [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;35;1mOffer Load (0.2ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token = 'TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (0.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '127.0.0.1' and token ='TNEx9VbOWhVcj4YxrTLzK0kHco4sbdmvv5sH74jvPBc=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (39.4ms)
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 195ms (View: 170, DB: 5) | 200 OK [http://localhost/sayprice]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 172.18.100.97 at 2011-05-12 11:01:59) [GET]
+  [4;35;1mProduct Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` [0m
+  [4;35;1mProduct Load (0.1ms)[0m   [0mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;36;1mOffer Load (1.2ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token = 'Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;35;1mOffer Load (1.7ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.97' and token ='Ml3b13fB/QZg3PVPfs8RzjpezhBDrWp4HYqlaXiCG4s=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+Rendered partials/_capsule (39.9ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 103ms (View: 72, DB: 8) | 200 OK [http://172.18.100.96/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.92 at 2011-05-12 11:02:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://172.18.100.96/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.92 at 2011-05-12 11:02:27) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://172.18.100.96/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#say_your_price (for 172.18.100.92 at 2011-05-12 11:02:40) [GET]
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `products` [0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` LIMIT 0,1[0m
+Rendering template within layouts/application
+Rendering home/say_your_price
+  [4;35;1mOffer Load (2.4ms)[0m   [0mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token = 'DbvAVETfZFYlcAnm2LMeaxWOarQVhi9F8/p+y8L6PIU=')) ORDER BY offers.id DESC LIMIT 1[0m
+  [4;36;1mOffer Load (1.6ms)[0m   [0;1mSELECT * FROM `offers` WHERE (`offers`.product_id = 1 AND (ip = '172.18.100.92' and token ='DbvAVETfZFYlcAnm2LMeaxWOarQVhi9F8/p+y8L6PIU=' and response IS NULL)) ORDER BY offers.id DESC LIMIT 1[0m
+Rendered partials/_capsule (37.7ms)
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mProfile Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 113ms (View: 85, DB: 8) | 200 OK [http://172.18.100.96/sayprice]
