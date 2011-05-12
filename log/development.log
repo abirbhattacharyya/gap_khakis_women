@@ -7457,3 +7457,312 @@ Rendered partials/_capsule (37.7ms)
   [4;35;1mProfile Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
 Completed in 113ms (View: 85, DB: 8) | 200 OK [http://172.18.100.96/sayprice]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#biz (for 172.18.100.92 at 2011-05-12 13:00:15) [GET]
+Rendering template within layouts/application
+Rendering users/biz
+  [4;36;1mProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mProfile Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 33ms (View: 26, DB: 2) | 200 OK [http://172.18.100.96/mykat7310]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#biz (for 172.18.100.92 at 2011-05-12 13:00:28) [POST]
+  Parameters: {"commit"=>"Go!", "authenticity_token"=>"DbvAVETfZFYlcAnm2LMeaxWOarQVhi9F8/p+y8L6PIU=", "user"=>{"password"=>"srdbmafh21", "email"=>"dealkat2@gmail.com"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (email = 'dealkat2@gmail.com' and password='srdbmafh21') LIMIT 1[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://172.18.100.96:3000/
+Completed in 124ms (DB: 2) | 302 Found [http://172.18.100.96/mykat7310]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 172.18.100.92 at 2011-05-12 13:00:28) [GET]
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mProfile Load (0.1ms)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [4;35;1mProduct Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `products` WHERE (`products`.user_id = 1) [0m
+  [4;35;1mProfile Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.user_id = 1) ORDER BY products.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering /home/notifications
+Rendered partials/_my_dashboard (1.3ms)
+  [4;35;1mProfile Load (0.1ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `profiles` LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `profiles` LIMIT 1[0m
+Completed in 64ms (View: 20, DB: 4) | 200 OK [http://172.18.100.96/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#daily_report (for 172.18.100.92 at 2011-05-12 13:00:32) [GET]
+  [4;35;1mUser Columns (6.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mOffer Load (133.0ms)[0m   [0mSELECT SUM(price) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid') LIMIT 1[0m
+  [4;36;1mOffer Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT SUM(price) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33') LIMIT 1[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =11) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =11) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =12) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =12) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =13) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =13) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =15) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =15) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =16) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =16) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =18) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =18) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =19) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =19) LIMIT 1[0m
+  [4;36;1mOffer Load (1.1ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =20) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =20) LIMIT 1[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =21) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =21) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =22) LIMIT 1[0m
+  [4;35;1mOffer Load (1.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =22) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =23) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =23) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =24) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =24) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =25) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =25) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =27) LIMIT 1[0m
+  [4;35;1mOffer Load (1.5ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =27) LIMIT 1[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =28) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =28) LIMIT 1[0m
+  [4;36;1mOffer Load (1.2ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =29) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =29) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =30) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =30) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =31) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =31) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =32) LIMIT 1[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =32) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =33) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =33) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =34) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =34) LIMIT 1[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =35) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =35) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =36) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =36) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =39) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =39) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =40) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =40) LIMIT 1[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =41) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =41) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =45) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =45) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =48) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =48) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =49) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =49) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =50) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =50) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =51) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =51) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =54) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =54) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =55) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =55) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =56) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =56) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =57) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =57) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =59) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =59) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =64) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =64) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =71) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:30:33' and price =71) LIMIT 1[0m
+Rendering home/daily_report
+  [4;36;1mSQL (8.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired' and Date(offers.updated_at) = '2011-05-11') [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired') [0m
+Completed in 6651ms (View: 16, DB: 217) | 200 OK [http://172.18.100.96/home/daily_report]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#daily_report (for 172.18.100.92 at 2011-05-12 13:01:24) [GET]
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mOffer Load (1.2ms)[0m   [0mSELECT SUM(price) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid') LIMIT 1[0m
+  [4;36;1mOffer Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT SUM(price) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24') LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =11) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =11) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =12) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =12) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =13) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =13) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =15) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =15) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =16) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =16) LIMIT 1[0m
+  [4;36;1mOffer Load (1.2ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =18) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =18) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =19) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =19) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =20) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =20) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =21) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =21) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =22) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =22) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =23) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =23) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =24) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =24) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =25) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =25) LIMIT 1[0m
+  [4;36;1mOffer Load (2.3ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =27) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =27) LIMIT 1[0m
+  [4;36;1mOffer Load (10.2ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =28) LIMIT 1[0m
+  [4;35;1mOffer Load (3.0ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =28) LIMIT 1[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =29) LIMIT 1[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =29) LIMIT 1[0m
+  [4;36;1mOffer Load (2.5ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =30) LIMIT 1[0m
+  [4;35;1mOffer Load (21.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =30) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =31) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =31) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =32) LIMIT 1[0m
+  [4;35;1mOffer Load (5.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =32) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =33) LIMIT 1[0m
+  [4;35;1mOffer Load (2.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =33) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =34) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =34) LIMIT 1[0m
+  [4;36;1mOffer Load (13.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =35) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =35) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =36) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =36) LIMIT 1[0m
+  [4;36;1mOffer Load (1.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =39) LIMIT 1[0m
+  [4;35;1mOffer Load (27.1ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =39) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =40) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =40) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =41) LIMIT 1[0m
+  [4;35;1mOffer Load (1.0ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =41) LIMIT 1[0m
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =45) LIMIT 1[0m
+  [4;35;1mOffer Load (26.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =45) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =48) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =48) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =49) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =49) LIMIT 1[0m
+  [4;36;1mOffer Load (3.5ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =50) LIMIT 1[0m
+  [4;35;1mOffer Load (1.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =50) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =51) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =51) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =54) LIMIT 1[0m
+  [4;35;1mOffer Load (1.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =54) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =55) LIMIT 1[0m
+  [4;35;1mOffer Load (1.5ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =55) LIMIT 1[0m
+  [4;36;1mOffer Load (0.9ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =56) LIMIT 1[0m
+  [4;35;1mOffer Load (2.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =56) LIMIT 1[0m
+  [4;36;1mOffer Load (1.0ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =57) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =57) LIMIT 1[0m
+  [4;36;1mOffer Load (1.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =59) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =59) LIMIT 1[0m
+  [4;36;1mOffer Load (1.5ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =64) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =64) LIMIT 1[0m
+  [4;36;1mOffer Load (2.2ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =71) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:31:24' and price =71) LIMIT 1[0m
+Rendering home/daily_report
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired' and (CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59')) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired') [0m
+Completed in 5928ms (View: 31, DB: 185) | 200 OK [http://172.18.100.96/home/daily_report]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#daily_report (for 172.18.100.92 at 2011-05-12 13:02:12) [GET]
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mOffer Load (1.4ms)[0m   [0mSELECT SUM(price) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid') LIMIT 1[0m
+  [4;36;1mOffer Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `offers`[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT SUM(price) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12') LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =11) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =11) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =12) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =12) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =13) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =13) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =15) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =15) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =16) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =16) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =18) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =18) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =19) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =19) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =20) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =20) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =21) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =21) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =22) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =22) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =23) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =23) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =24) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =24) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =25) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =25) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =27) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =27) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =28) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =28) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =29) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =29) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =30) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:12' and price =30) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =31) LIMIT 1[0m
+  [4;35;1mOffer Load (0.8ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =31) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =32) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =32) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =33) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =33) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =34) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =34) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =35) LIMIT 1[0m
+  [4;35;1mOffer Load (0.9ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =35) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =36) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =36) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =39) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =39) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =40) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =40) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =41) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =41) LIMIT 1[0m
+  [4;36;1mOffer Load (0.6ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =45) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =45) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =48) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =48) LIMIT 1[0m
+  [4;36;1mOffer Load (4.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =49) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =49) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =50) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =50) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =51) LIMIT 1[0m
+  [4;35;1mOffer Load (1.4ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =51) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =54) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =54) LIMIT 1[0m
+  [4;36;1mOffer Load (0.8ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =55) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =55) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =56) LIMIT 1[0m
+  [4;35;1mOffer Load (1.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =56) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =57) LIMIT 1[0m
+  [4;35;1mOffer Load (0.7ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =57) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =59) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =59) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =64) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =64) LIMIT 1[0m
+  [4;36;1mOffer Load (0.7ms)[0m   [0;1mSELECT COUNT(id) as total FROM `offers` WHERE ((CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') and response LIKE 'paid' and price =71) LIMIT 1[0m
+  [4;35;1mOffer Load (0.6ms)[0m   [0mSELECT COUNT(id) as total FROM `offers` WHERE (response LIKE 'paid' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-12 07:32:13' and price =71) LIMIT 1[0m
+Rendering home/daily_report
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired' and (CONVERT_TZ(updated_at, '+0:00', '-7:00') >= '2011-05-11 00:00:00' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59')) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `offers` WHERE (response <> 'expired' and CONVERT_TZ(updated_at, '+0:00', '-7:00') <= '2011-05-11 23:59:59') [0m
+Completed in 5909ms (View: 34, DB: 65) | 200 OK [http://172.18.100.96/home/daily_report]
