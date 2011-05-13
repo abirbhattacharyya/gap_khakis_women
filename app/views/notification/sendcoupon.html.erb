@@ -1,5 +1,9 @@
 <%description = @payment.offer.product.style_description%>
-<h1>Congrats! You Won <%=description.first.downcase.match(/[aeiou]/) ? "an" : "a"%> <%= description %> for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %></h1>
+<% if PromotionCode::SPECIAL_CODES.include?(@payment.offer.price) %>
+  <h1>Congrats! You Won <%=description.first.downcase.match(/[aeiou]/) ? "an" : "a"%> <%=description %>! Share this coupon with friends</h1>
+<%else%>
+  <h1>Congrats! You Won <%=description.first.downcase.match(/[aeiou]/) ? "an" : "a"%> <%=description %> for <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %></h1>
+<%end%>
 <div class="columns">
     <div class="column widest">
         <div class="capsule2 inline w550px">
