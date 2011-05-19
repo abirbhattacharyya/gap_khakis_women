@@ -15,7 +15,7 @@ You Saved: <%= (@payment.offer.price > 0) ? number_to_currency((@payment.offer.p
 
 <%=description %><%#= " (" +  @payment.offer.product.color.titleize + ")" %>
 Style#: <%= @payment.offer.product.style_num %>
-Expires : 5/29/11<%#= @payment.expiry.strftime("%m/%d/%y")[1..-1] %>
+Expires : <%= @payment.expiry.strftime("%m/%d/%y")[1..-1] %>
 
 
 <b>Terms & Conditions:</b>

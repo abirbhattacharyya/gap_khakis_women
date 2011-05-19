@@ -13,7 +13,7 @@
               <p>
                   Your Price: <%= (@payment.offer.price > 0) ? number_to_currency(@payment.offer.price.ceil, :precision => 0) : "Free" %><br/>
                   You Saved: <%= (@payment.offer.price > 0) ? number_to_currency((@payment.offer.product.ticketed_retail - @payment.offer.price), :precision => 2) : "Free" %>
-                  <span class="expires">Expires : 5/29/11 <%#= @payment.expiry.strftime("%m/%d/%y")[1..-1] %></span>
+                  <span class="expires">Expires : <%= @payment.expiry.strftime("%m/%d/%y")[1..-1] %></span>
               </p>
               <p>
                   <%=description %><%#= " (" +  @payment.offer.product.color.titleize + ")" %><br/>
